@@ -1,8 +1,4 @@
-<script lang="ts">
-	import Themeswitcher from './themeswitcher.svelte';
-</script>
-
-<div class="navbar bg-neutral shadow-md">
+<div class="navbar bg-neutral bg-opacity-80 shadow-md">
 	<div class="navbar-start">
 		<div class="dropdown z-[1000]">
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -35,9 +31,7 @@
 	</div>
 	<div class="navbar-center">
 		<!-- svelte-ignore a11y-missing-attribute -->
-		<a class="upper-case btn-ghost btn font-poppins text-xl text-primary">daisyUI</a>
+		<a class="btn-ghost btn font-trajan tracking-widest text-xl text-primary">Opus Iræ</a>
 	</div>
-	<div class="navbar-end">
-		<Themeswitcher />
-	</div>
+  <div class="navbar-end" />
 </div>
