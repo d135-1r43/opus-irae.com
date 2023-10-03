@@ -1,16 +1,6 @@
-<script setup lang="ts">
-  import {counter, decrease, increase} from "../stores/counter.store";
-
-  let counterValue: number;
-
-  counter.subscribe(v => {
-    counterValue = v;
-  });
-</script>
-
 <template>
   <div class="hero min-h-screen">
-    <div class="bg-opacity-45 hero-overlay"></div>
+    <div class="bg-opacity-45 hero-overlay "></div>
     <div class="hero-content text-center text-neutral-content">
       <div class="max-w-md">
         <h1 class="mb-5 font-poppins text-5xl font-bold">Hello there</h1>
@@ -25,10 +15,5 @@
         <button class="btn btn-primary font-poppins">Get Started</button>
       </div>
     </div>
-  </div>
-  <div class="m-2 text-center font-poppins text-neutral-content">
-    <button class="btn btn-circle btn-sm mr-2 text-accent" on:click="{decrease}">-</button>
-    Counter: { counterValue }
-    <button class="btn btn-circle btn-sm ml-2 text-accent" on:click="{increase}">+</button>
   </div>
 </template>
