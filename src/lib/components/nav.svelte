@@ -2,7 +2,23 @@
   <div
     class="w-full md:min-w-[480px] md:max-w-[520px] h-full md:text-white flex flex-col divide-y divide-foreground md:divide-white">
     <h1
-      class="text-6xl p-6 md:text-title2 pb-1.5 md:pb-4 font-trajan tracking-wider hover:opacity-60 transition-opacity duration-300 md:relative md:-left-1">
-      Opus Iræ</h1>
+      class="
+        p-6 pb-1.5
+        md:text-title2
+        md:pb-4
+        text-6xl font-trajan tracking-wider
+        hover:opacity-60
+        transition-opacity duration-300
+        md:relative md:-left-1
+        ">
+      <a href="/">Opus Iræ</a>
+    </h1>
+    <nav class="flex flex-col py-5 z-10"><a
+      class="block text-2xl leading-[55px] font-krete hover:opacity-60 transition-opacity duration-300"
+      href="/music">Music</a><a
+      class="block text-2xl leading-[55px] font-krete hover:opacity-60 transition-opacity duration-300"
+      href="/tour">Tour</a><a
+      class="block text-2xl leading-[55px] font-krete hover:opacity-60 transition-opacity duration-300"
+      href="/info">Info</a></nav>
   </div>
 </aside>

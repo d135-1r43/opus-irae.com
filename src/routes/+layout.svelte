@@ -1,7 +1,6 @@
 <script lang="ts">
   import {browser} from '$app/environment';
   import Nav from '$lib/components/nav.svelte';
-  import Footer from '$lib/components/footer.svelte';
   import {QueryClient, QueryClientProvider} from '@tanstack/svelte-query';
   import '../app.css';
 
