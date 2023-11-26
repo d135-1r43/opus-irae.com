@@ -15,10 +15,12 @@
 </script>
 
 <QueryClientProvider client={queryClient}>
-  <div class="max-w-8xl mx-auto pt-4 pr-8 pb-8 pl-8">
+  <div class="sticky top-0 right-0 h-screen md:col-span-5 2xl:col-span-6">
+    <img alt="Blue Background with Clouds and Stars" decoding="sync" data-nimg="fill"
+         class="hidden md:block object-cover transition-opacity"
+         style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" sizes="100vw"
+         src="background-kw.png">
     <Nav/>
-    <slot/>
-    <Footer/>
   </div>
 </QueryClientProvider>
 

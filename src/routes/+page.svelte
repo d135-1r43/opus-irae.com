@@ -7,6 +7,7 @@ import Hero from "../lib/components/hero.svelte";
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
+
 <div class="mt-2">
   <Hero />
 </div>

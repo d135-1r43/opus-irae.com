@@ -1,39 +1,8 @@
-<div class="navbar bg-neutral bg-opacity-80 shadow-md">
-    <div class="navbar-start">
-        <div class="dropdown z-[1000]">
-            <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label tabindex="0" class="btn-ghost btn-circle btn">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                >
-                    <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h7"
-                    />
-                </svg
-                >
-            </label>
-            <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-            <ul
-                    tabindex="0"
-                    class="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 font-poppins shadow"
-            >
-                <li><a href="/">Homepage</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/country">Country</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="navbar-center">
-        <!-- svelte-ignore a11y-missing-attribute -->
-        <a class="btn-ghost btn font-trajan tracking-widest text-xl text-primary">Opus Iræ</a>
-    </div>
-    <div class="navbar-end"/>
-</div>
+<aside class="h-full flex p-5 pt-4 md:p-2xl items-center overflow-auto bg-amber-400">
+  <div
+    class="w-full md:min-w-[480px] md:max-w-[520px] h-full md:text-white flex flex-col divide-y divide-foreground md:divide-white">
+    <h1
+      class="text-6xl p-6 md:text-title2 pb-1.5 md:pb-4 font-trajan tracking-wider hover:opacity-60 transition-opacity duration-300 md:relative md:-left-1">
+      Opus Iræ</h1>
+  </div>
+</aside>
