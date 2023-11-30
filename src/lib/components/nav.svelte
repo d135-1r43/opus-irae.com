@@ -7,19 +7,21 @@
 
 <template>
   <aside class="
-      h-full w-full ml-10 pt-4 md:p-2xl overflow-auto
+      h-full w-full pt-4
+      md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] md:text-white md:divide-white
+      overflow-auto
       flex-col divide-y
-      md:min-w-[480px] md:max-w-[520px] md:text-white md:divide-white">
+      ">
     <h1
       class="
         p-6 pb-1.5
-        md:text-title2
+        font-trajan tracking-wider
+        text 4xl
+        md:text-6xl
         md:pb-4
-        text-6xl font-trajan tracking-wider
         hover:opacity-60
         transition-opacity duration-300
-        md:relative md:-left-1
-        ">
+        md:relative md:-left-1">
       <a href="/">Opus Iræ</a>
     </h1>
     <nav class="flex flex-col py-5 pl-7">
