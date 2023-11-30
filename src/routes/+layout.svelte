@@ -18,11 +18,14 @@
 
 <QueryClientProvider client={queryClient}>
   <div class="sticky top-0 right-0 h-screen md:col-span-5 2xl:col-span-6">
-    <img alt="Blue Background with Clouds and Stars" decoding="sync" data-nimg="fill"
-         class="hidden md:block object-cover transition-opacity"
-         style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" sizes="100vw"
+    <img alt="Blue Background with Clouds and Stars" decoding="sync"
+         class="md:block object-cover transition-opacity bg-black opacity-80 -z-10"
+         style="position: absolute; height: 100%; width: 100%; inset: 0px" sizes="100vw"
          src="background-kw.png">
-    <Nav/>
+    <div class="flex w-full h-full">
+      <Nav/>
+      <slot/>
+    </div>
     <Footer/>
   </div>
 </QueryClientProvider>
