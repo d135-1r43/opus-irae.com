@@ -1,7 +1,10 @@
 <script lang="ts">
   import {browser} from '$app/environment';
   import Nav from '$lib/components/nav.svelte';
+  import Footer from '$lib/components/footer.svelte';
+
   import {QueryClient, QueryClientProvider} from '@tanstack/svelte-query';
+
   import '../app.css';
 
   const queryClient = new QueryClient({
@@ -20,6 +23,7 @@
          style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" sizes="100vw"
          src="background-kw.png">
     <Nav/>
+    <Footer/>
   </div>
 </QueryClientProvider>
 

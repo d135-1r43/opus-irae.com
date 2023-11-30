@@ -1,21 +1,18 @@
-<footer class="bg-neutral bg-opacity-70 rounded-lg shadow m-4">
-  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        © 2023 Opus Iræ GbR and Endtime Productions AB. All Rights Reserved.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
-      </li>
-      <li>
-        <a href="#" class="hover:underline">Contact</a>
-      </li>
-    </ul>
-  </div>
+<script>
+  // Get the current year
+  const currentYear = new Date().getFullYear();
+</script>
+
+<footer class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between font-krete">
+  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+    © {currentYear} Opus Iræ and Endtime Productions AB. All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+    <li>
+      <a href="#" class="mr-4 hover:underline md:mr-6 ">Impress</a>
+    </li>
+    <li>
+      <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+    </li>
+  </ul>
 </footer>

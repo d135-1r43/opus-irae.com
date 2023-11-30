@@ -8,5 +8,5 @@
 </svelte:head>
 
 <div class="mt-2">
-  <Hero/>
+  lorem ipsum dolor sit amet
 </div>
