@@ -1,8 +1,9 @@
-<script lang="ts">
-  import NavItem from '$lib/components/navitem.svelte';
-  import Spotify from '$lib/components/socials/spotify.svelte';
-  import Bandcamp from '$lib/components/socials/bandcamp.svelte';
-  import Instagram from '$lib/components/socials/instagram.svelte';
+<script lang="ts" xmlns="http://www.w3.org/1999/html">
+  import NavItem from "$lib/components/navitem.svelte";
+  import Spotify from "$lib/components/socials/spotify.svelte";
+  import Bandcamp from "$lib/components/socials/bandcamp.svelte";
+  import Instagram from "$lib/components/socials/instagram.svelte";
+  import Footer from "$lib/components/footer.svelte";
 </script>
 
 <template>
@@ -26,14 +27,15 @@
       <a href="/">Opus Iræ</a>
     </h1>
     <nav class="flex flex-col py-5 pl-7">
-      <NavItem text="Discography" href="/music"/>
-      <NavItem text="Live" href="/"/>
-      <NavItem text="Info" href="/"/>
+      <NavItem text="Discography" href="/music" />
+      <NavItem text="Live" href="/" />
+      <NavItem text="Info" href="/info" />
     </nav>
     <div class="flex py-5 pl-7">
-      <Spotify href="https://open.spotify.com/artist/3AFQQ6CRoysoxWfUGjnosX?si=lVLIkZ-GRpCJ8PHWAx2X-A"/>
-      <Bandcamp href="https://opusirae.bandcamp.com/"/>
-      <Instagram href="https://www.instagram.com/opusirae/"/>
+      <Spotify href="https://open.spotify.com/artist/3AFQQ6CRoysoxWfUGjnosX?si=lVLIkZ-GRpCJ8PHWAx2X-A" />
+      <Bandcamp href="https://opusirae.bandcamp.com/" />
+      <Instagram href="https://www.instagram.com/opusirae/" />
     </div>
+    <Footer />
   </aside>
 </template>

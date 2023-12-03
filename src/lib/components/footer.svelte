@@ -3,16 +3,15 @@
   const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between font-krete z-20">
-  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-    © {currentYear} Opus Iræ and Endtime Productions AB. All Rights Reserved.
+<template>
+  <div class="fixed bottom-0 border-none">
+    <footer class="mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between md:pl-10 font-krete z-20">
+  <span class="text-xs text-gray-600 sm:text-center">
+    © {currentYear} Opus Iræ & Endtime Productions AB
   </span>
-  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-    <li>
-      <a href="#" class="mr-4 hover:underline md:mr-6 ">Impress</a>
-    </li>
-    <li>
-      <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-    </li>
-  </ul>
-</footer>
+      <span class="flex flex-wrap items-center mt-3 text-xs font-medium text-gray-600 sm:mt-0">
+      <a href="#" class="mr-2 hover:underline md:mr-2 md:ml-10">Impress & Privacy Policy</a>
+  </span>
+    </footer>
+  </div>
+</template>

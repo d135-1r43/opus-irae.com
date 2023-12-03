@@ -3,7 +3,7 @@
   import { _getImageUrl } from "./+page";
 
   import Heptagram from "$lib/components/icons/heptagram.svelte";
-  import NavMain from "$lib/components/nav-main.svelte";
+  import Title from "$lib/components/title.svelte";
 
   export let data: PageData;
 
@@ -11,9 +11,10 @@
     let date: Date = new Date(datestring);
 
     const duration = +(new Date()) - +date;
-    if (duration < 1000 * 60 * 60 * 24 * 365) {
+    const aYear = 1000 * 60 * 60 * 24 * 365;
+    if (duration < aYear) {
       // less than a year ago
-      const prefix: string = (duration < 0) ? "Release: " : "";
+      const prefix: string = (duration < 0) ? "Planned Release: " : "";
       return prefix + date.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
     } else {
       // more than a year ago
@@ -33,18 +34,7 @@
       flex-col divide-y
       bg-black bg-transparent/30
       ">
-    <h1
-      class="
-        p-6 pb-1.5
-        font-trajan tracking-wider
-        text-3xl
-        md:text-2xl
-        md:pb-4
-        hover:opacity-60
-        transition-opacity duration-300
-        md:relative md:-left-1">
-      <a href="/">Opus Iræ</a>
-    </h1>
+    <Title />
 
     <div class="flex flex-col px-5 grow">
       {#each data.releases.data as { title, type, release_date, label, cover }}
@@ -62,7 +52,7 @@
           </a>
         </div>
         <div class="flex justify-center py-2">
-          <Heptagram/>
+          <Heptagram />
         </div>
       {/each}
     </div>
@@ -71,7 +61,7 @@
     <div class="v-full flex-grow max-xl:hidden ">
       <div class="absolute font-krete italic bottom-20 right-20 text-2xl max-w-[520px]">
         <p>
-          But who may abide the day of His coming?<br/>
+          But who may abide the day of His coming?<br />
           And who shall stand when He appeareth?
         </p>
       </div>

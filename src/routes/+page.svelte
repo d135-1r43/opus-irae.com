@@ -1,6 +1,5 @@
 <script  lang="ts">
   import NavMain from "$lib/components/nav-main.svelte";
-  export const prerender = true;
 </script>
 
 <svelte:head>
