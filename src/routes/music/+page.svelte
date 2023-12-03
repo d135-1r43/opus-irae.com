@@ -1,3 +1,24 @@
+<script lang="ts">
+  import type { PageData } from "./$types";
+  import { _getImageUrl } from "./+page";
+
+  export let data: PageData;
+
+  function formatDate(datestring: string): string {
+    let date: Date = new Date(datestring);
+
+    var duration = +(new Date()) - +date;
+    if (duration < 1000 * 60 * 60 * 24 * 365) {
+      // less than a year ago
+      var prefix: string = (duration < 0) ? "Release: " : "";
+      return prefix + date.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+    } else {
+      return date.getFullYear().toString();
+    }
+  }
+</script>
+
+
 <svelte:head>
   <title>Opus Iræ Discography</title>
 </svelte:head>
@@ -6,7 +27,6 @@
   <aside class="
       h-full w-full pt-4
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[820px] md:text-white md:divide-white
-      overflow-auto
       flex-col divide-y
       bg-black bg-transparent/30
       ">
@@ -29,19 +49,21 @@
     </nav -->
 
     <div class="flex flex-col px-5 grow">
-      <div class="space-y-xl px-0 py-5 md:p-5">
-        <a class="block space-y-3 group" href="/music/the-burden-of-man">
-          <img
-            alt="The Burden of Man" width="500" height="500" decoding="async" data-nimg="1"
-            class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
-            style="color: transparent;"
-            srcset="https://ucarecdn.com/54da9f1c-ddea-4e81-8446-3a209e052134/-/format/auto/-/stretch/off/-/progressive/yes/-/resize/1080x/-/quality/smart/ 1x, https://ucarecdn.com/54da9f1c-ddea-4e81-8446-3a209e052134/-/format/auto/-/stretch/off/-/progressive/yes/-/resize/2048x/-/quality/smart/ 2x"
-            src="https://ucarecdn.com/54da9f1c-ddea-4e81-8446-3a209e052134/-/format/auto/-/stretch/off/-/progressive/yes/-/resize/2048x/-/quality/smart/">
-          <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
-            <h3 class="font-krete text-xl">The Burden of Man</h3>
-            <p class="pt-0.5 font-krete text-m">Single, 2018</p></div>
-        </a>
-      </div>
+      {#each data.releases.data as { title, type, release_date, label, cover }}
+        <div class="space-y-xl px-0 py-5 md:p-5">
+          <a class="block space-y-3 group" href="/music/the-burden-of-man">
+            <img
+              alt="The Burden of Man" width="500" height="500" decoding="async" data-nimg="1"
+              class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
+              style="color: transparent;"
+              src="{ _getImageUrl(cover)}">
+            <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
+              <h3 class="font-krete text-xl">{title}</h3>
+              <p class="pt-0.5 font-krete text-m">{type} · {formatDate(release_date)} · {label}</p>
+            </div>
+          </a>
+        </div>
+      {/each}
     </div>
   </aside>
 </template>

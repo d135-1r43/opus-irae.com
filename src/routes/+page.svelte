@@ -1,13 +1,10 @@
 <script  lang="ts">
   import NavMain from "$lib/components/nav-main.svelte";
   export const prerender = true;
-
-  import type { PageData } from './$types';
-  export let data: PageData;
 </script>
 
 <svelte:head>
-  <title>{data.band.data.name}</title>
+  <title>Opus Iræ</title>
 </svelte:head>
 
 <template>
