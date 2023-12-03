@@ -1,11 +1,9 @@
 <script lang="ts">
-  import {browser} from '$app/environment';
-  import Nav from '$lib/components/nav.svelte';
-  import Footer from '$lib/components/footer.svelte';
+  import { browser } from "$app/environment";
 
-  import {QueryClient, QueryClientProvider} from '@tanstack/svelte-query';
+  import { QueryClient, QueryClientProvider } from "@tanstack/svelte-query";
 
-  import '../app.css';
+  import "../app.css";
 
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -22,11 +20,7 @@
          class="md:block object-cover transition-opacity bg-black opacity-80 -z-10"
          style="position: absolute; height: 100%; width: 100%; inset: 0px" sizes="100vw"
          src="background-kw.png">
-    <div class="flex w-full h-full">
-      <Nav/>
-      <slot/>
-    </div>
-    <Footer/>
+    <slot />
   </div>
 </QueryClientProvider>
 

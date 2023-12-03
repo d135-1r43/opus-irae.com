@@ -11,12 +11,13 @@
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] md:text-white md:divide-white
       overflow-auto
       flex-col divide-y
+      bg-black bg-transparent/30
       ">
     <h1
       class="
         p-6 pb-1.5
         font-trajan tracking-wider
-        text 4xl
+        text-3xl
         md:text-6xl
         md:pb-4
         hover:opacity-60
@@ -25,7 +26,7 @@
       <a href="/">Opus Iræ</a>
     </h1>
     <nav class="flex flex-col py-5 pl-7">
-      <NavItem text="Discography" href="/"/>
+      <NavItem text="Discography" href="/music"/>
       <NavItem text="Live" href="/"/>
       <NavItem text="Info" href="/"/>
     </nav>

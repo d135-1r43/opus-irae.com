@@ -5,7 +5,7 @@
 
 <template>
   <a class="block text-3xl leading-[55px]
-    font-trajan font-ligh tracking-[.40em]
+    font-trajan font-light tracking-widest
     hover:opacity-60
     transition-opacity duration-300"
      href="{href}">
