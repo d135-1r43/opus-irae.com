@@ -3,6 +3,7 @@
   import { _getImageUrl } from "./+page";
 
   import Heptagram from "$lib/components/icons/heptagram.svelte";
+  import NavMain from "$lib/components/nav-main.svelte";
 
   export let data: PageData;
 
@@ -47,7 +48,7 @@
 
     <div class="flex flex-col px-5 grow">
       {#each data.releases.data as { title, type, release_date, label, cover }}
-        <div class="space-y-xl px-0 py-5 md:p-5">
+        <div class="space-y-xl px-0 py-5 md:p-10">
           <a class="block space-y-3 group" href="/">
             <img
               alt="{title} Cover" width="500" height="500" decoding="async" data-nimg="1"
@@ -55,15 +56,25 @@
               style="color: transparent;"
               src="{ _getImageUrl(cover)}">
             <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
-              <h3 class="font-krete text-xl">{title}</h3>
+              <h3 class="font-krete text-xl mt-8">{title}</h3>
               <p class="pt-0.5 font-krete text-m">{type} · {formatDate(release_date)} · {label}</p>
             </div>
           </a>
         </div>
-        <div class="flex justify-center py-10">
+        <div class="flex justify-center py-2">
           <Heptagram/>
         </div>
       {/each}
     </div>
   </aside>
+  <div class="flex w-full">
+    <div class="v-full flex-grow max-xl:hidden ">
+      <div class="absolute font-krete italic bottom-20 right-20 text-2xl max-w-[520px]">
+        <p>
+          But who may abide the day of His coming?<br/>
+          And who shall stand when He appeareth?
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
