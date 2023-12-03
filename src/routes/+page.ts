@@ -1,5 +1,7 @@
-import '@fontsource/fira-mono/index.css';
-import '@fontsource/inter/index.css';
-import '@fontsource/poppins/index.css';
+import type { PageLoad } from './$types';
 
-export const prerender = true;
+export const load: PageLoad = async ({ fetch, params }) => {
+	const res: Response = await fetch(`https://directus.herhoffer.net/items/band/1`);
+	const band = await res.json();
+	return { band };
+};
