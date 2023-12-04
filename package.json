@@ -18,7 +18,7 @@
     "test:watch": "vitest",
     "test:browser": "playwright test",
     "coverage": "vitest run --coverage",
-    "check:all": "yarn format && yarn lint",
+    "check:all": "yarn format && yarn lint"
   },
   "dependencies": {
     "@directus/sdk": "^13.0.2",
@@ -39,7 +39,6 @@
     "@vitest/ui": "^0.34.6",
     "autoprefixer": "^10.4.15",
     "c8": "^8.0.1",
-    "daisyui": "^3.7.3",
     "directus-typescript-gen": "^1.0.0",
     "eslint": "~8.48.0",
     "eslint-config-prettier": "^9.0.0",

@@ -10,23 +10,5 @@ module.exports = {
       krete: ['krete', 'serif']
     }
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
-  // daisyUI config (optional)
-  daisyui: {
-    themes: [
-      {
-        opusirae: {
-          primary: '#eeeaea',
-          secondary: '#3e8fb0',
-          accent: '#eb6f92',
-          neutral: '#092145',
-          'base-100': '#0C1822',
-          info: '#9ccfd8',
-          success: '#c4a7e7',
-          warning: '#f6c177',
-          error: '#b4637a'
-        }
-      }
-    ]
-  }
+  plugins: [require('@tailwindcss/typography')]
 };
