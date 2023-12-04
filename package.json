@@ -19,7 +19,6 @@
     "test:browser": "playwright test",
     "coverage": "vitest run --coverage",
     "check:all": "yarn format && yarn lint",
-    "generate:directus": "npx directus-typescript-gen --host https://directus.herhoffer.net --email $EMAIL --password \"$PASSWORD\" --typeName ApiCollections --outFile src/lib/data/api-collection.d.ts"
   },
   "dependencies": {
     "@directus/sdk": "^13.0.2",
