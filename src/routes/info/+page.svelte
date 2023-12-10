@@ -7,9 +7,17 @@
 
   export let data: PageData;
 
+  let galleryCols = Array(3).fill(0);
+  let galleryRows = Array(4).fill(0);
+
   function format(info: string): string {
     return info.replace(/\n/g, "<br/>");
   }
+
+  function getImageIdx(rowIndex: number, colIndex: number): number {
+    return (rowIndex * (galleryRows.length - 1)) + colIndex;
+  }
+
 </script>
 
 <svelte:head>
@@ -39,63 +47,17 @@
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-10 border-none">
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-               alt="">
+      {#each galleryRows as _, rowIndex}
+        <div class="grid gap-4">
+          {#each galleryCols as _, colIndex}
+            <div>
+              <img class="h-auto max-w-full rounded-lg"
+                   src="{_getImageUrl(data.images[getImageIdx(rowIndex, colIndex)].directus_files_id)}"
+                   alt="Opus Iræ Live Foto">
+            </div>
+          {/each}
         </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg"
-               src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-        </div>
-      </div>
+      {/each}
     </div>
   </aside>
 </template>

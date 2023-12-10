@@ -21,7 +21,6 @@
     "check:all": "yarn format && yarn lint"
   },
   "dependencies": {
-    "@directus/sdk": "^13.0.2",
     "@tanstack/svelte-query": "^4.33.0"
   },
   "devDependencies": {
