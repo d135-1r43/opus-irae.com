@@ -51,7 +51,7 @@
         <div class="grid gap-4">
           {#each galleryCols as _, colIndex}
             <div>
-              <img class="h-auto max-w-full rounded-lg"
+              <img class="h-auto w-auto rounded-lg object-cover"
                    src="{_getImageUrl(data.images[getImageIdx(rowIndex, colIndex)].directus_files_id)}"
                    alt="Opus Iræ Live Foto">
             </div>
@@ -59,5 +59,10 @@
         </div>
       {/each}
     </div>
+
+    <div class="flex justify-center py-2 mt-10 mb-10">
+      <Heptagram />
+    </div>
+
   </aside>
 </template>
