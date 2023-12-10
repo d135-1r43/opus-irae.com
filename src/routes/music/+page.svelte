@@ -30,9 +30,9 @@
 <template>
   <aside class="
       w-full pt-4
-      md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[820px] md:text-white md:divide-white
+      md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[820px] text-white md:divide-white
       flex-col divide-y
-      bg-black bg-transparent/30
+      bg-black bg-transparent/80
       ">
     <Title />
 

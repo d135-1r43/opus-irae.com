@@ -27,7 +27,7 @@
 <template>
   <aside class="
       w-full pt-4
-      md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[1220px] md:text-white md:divide-white
+      md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[1220px] text-white md:divide-white
       flex-col divide-y
       bg-black bg-transparent/30
       ">
