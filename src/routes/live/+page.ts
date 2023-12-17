@@ -6,7 +6,18 @@ export const load: PageLoad = async ({ fetch }) => {
 	);
 	const events = await eventsRes.json();
 
+	const today: Date = new Date();
+  today.setHours(0, 0, 0, 0);
 
+  const pastEvents = events.data.events.filter((event: { date: string }): boolean => {
+    const eventDate: Date = new Date(event.date);
+		return eventDate < today;
+	});
 
-	return { events: events.data.events };
+  const futureEvents = events.data.events.filter((event: { date: string }): boolean => {
+    const eventDate: Date = new Date(event.date);
+		return eventDate >= today;
+	});
+
+	return { pastEvents: pastEvents, futureEvents: futureEvents };
 };

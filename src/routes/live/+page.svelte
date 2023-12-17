@@ -37,7 +37,14 @@
         <div class="flex justify-center py-5">
           <Heptagram />
         </div>
-        {#each data.events as event }
+
+        {#if data.futureEvents.length == 0 }
+          <div class="flex justify-center py-2 font-krete text-white text-lg font-thin mb-20 p-20 text-center">
+            No one knows about that day or hour, not even the angels in heaven, nor the Son, but only the Father.
+          </div>
+        {/if}
+
+        {#each data.futureEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
             <p class="text-lg text-white">{ event.date }</p>
             <div class="md:min-w-[350px]">
@@ -62,9 +69,26 @@
         <div class="flex justify-center py-2">
           <Heptagram />
         </div>
+        {#each data.pastEvents as event }
+          <div class="flex flex-col md:flex-row justify-between px-4 py-4">
+            <p class="text-lg text-white">{ event.date }</p>
+            <div class="md:min-w-[350px]">
+              <p class="text-lg text-white">
+                {#if event.event_name}
+                  { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
+                {:else }
+                  { event.location }
+                {/if}
+              </p>
+              <p class="text-lg text-white font-thin">{ event.city } <span
+                class="font-thin">{ getFlagEmoji(event.country_code.toLowerCase()) }</span></p>
+            </div>
+          </div>
+        {/each}
       </div>
     </div>
   </aside>
+
   <div class="flex w-full">
     <div class="v-full flex-grow max-xl:hidden ">
       <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
