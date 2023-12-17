@@ -30,6 +30,7 @@
       <NavItem text="Discography" href="/music" />
       <NavItem text="Live" href="/live" />
       <NavItem text="Info" href="/info" />
+      <NavItem text="Contact" href="/contact" />
     </nav>
     <div class="flex py-5 pl-7">
       <Spotify href="https://open.spotify.com/artist/3AFQQ6CRoysoxWfUGjnosX?si=lVLIkZ-GRpCJ8PHWAx2X-A" />
