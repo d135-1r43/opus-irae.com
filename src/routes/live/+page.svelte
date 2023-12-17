@@ -13,6 +13,11 @@
       .map(char => 127397 + char.charCodeAt(0));
     return String.fromCodePoint(...codePoints);
   }
+
+  function formatDate(datestring: string): string {
+    let date: Date = new Date(datestring);
+    return Intl.DateTimeFormat().format(date);
+  }
 </script>
 
 <svelte:head>
@@ -46,7 +51,7 @@
 
         {#each data.futureEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
-            <p class="text-lg text-white">{ event.date }</p>
+            <p class="text-lg text-white">{ formatDate(event.date) }</p>
             <div class="md:min-w-[350px]">
               <p class="text-lg text-white">
                 {#if event.event_name}
@@ -55,8 +60,8 @@
                   { event.location }
                 {/if}
               </p>
-              <p class="text-lg text-white font-thin">{ event.city } <span
-                class="font-thin">{ getFlagEmoji(event.country_code.toLowerCase()) }</span></p>
+              <p class="text-lg text-white font-thin">{ event.city }
+                <span class="font-thin">{ getFlagEmoji(event.country_code.toLowerCase()) }</span></p>
               <button class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">
                 Buy Ticket
               </button>
@@ -71,7 +76,7 @@
         </div>
         {#each data.pastEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-4">
-            <p class="text-lg text-white">{ event.date }</p>
+            <p class="text-lg text-white">{ formatDate(event.date) }</p>
             <div class="md:min-w-[350px]">
               <p class="text-lg text-white">
                 {#if event.event_name}
