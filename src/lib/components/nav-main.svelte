@@ -28,7 +28,7 @@
     </h1>
     <nav class="flex flex-col py-5 pl-7">
       <NavItem text="Discography" href="/music" />
-      <NavItem text="Live" href="/" />
+      <NavItem text="Live" href="/live" />
       <NavItem text="Info" href="/info" />
     </nav>
     <div class="flex py-5 pl-7">
