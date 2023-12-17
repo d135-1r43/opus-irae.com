@@ -2,22 +2,19 @@
   import Title from "$lib/components/title.svelte";
   import Heptagram from "$lib/components/icons/heptagram.svelte";
 
-  import { _getImageUrl } from "./+page";
+  import type { PageData } from "./$types";
 
   export let data: PageData;
-  export let tourDates: TourDate[];
 
-  let galleryCols = Array(3).fill(0);
-  let galleryRows = Array(4).fill(0);
-
-  function format(info: string): string {
-    return info.replace(/\n/g, "<br/>");
-  }
-
-  function getImageIdx(rowIndex: number, colIndex: number): number {
-    return (rowIndex * (galleryRows.length - 1)) + colIndex;
+  function getFlagEmoji(countryCode: string): string {
+    const codePoints = countryCode
+      .toUpperCase()
+      .split("")
+      .map(char => 127397 + char.charCodeAt(0));
+    return String.fromCodePoint(...codePoints);
   }
 </script>
+
 <svelte:head>
   <title>Opus Iræ Live</title>
 </svelte:head>
@@ -33,42 +30,48 @@
     <Title />
 
     <div>
-      <!-- Tour dates list -->
       <div class="mt-10 mb-10 font-krete">
-        <span>The Joy of our Hearts has ceased</span>
-        <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
-          <p class="text-4xl text-white">21.02.23</p>
-          <div>
-            <p class="text-lg text-white">Blast of Eternity Festival</p>
-            <p class="text-lg text-white font-thin">Heilbronn <span class="font-thin">DE</span></p>
-            <button class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">Buy Ticket</button>
-          </div>
+        <div class="flex justify-center py-2 font-krete italic text-gray-300 text-2xl">
+          The Joy Of Our Hearts Has Ceased
         </div>
-        <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
-          <p class="text-lg text-white">21.02.23</p>
-          <div>
-            <p class="text-lg text-white">Blast of Eternity Festival</p>
-            <p class="text-lg text-white">Heilbronn DE</p>
-            <button class="mt-2 px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded shadow">Buy Ticket</button>
-          </div>
+        <div class="flex justify-center py-5">
+          <Heptagram />
         </div>
-        <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
-          <p class="text-lg text-white">21.02.23</p>
-          <div>
-            <p class="text-lg text-white">Blast of Eternity Festival</p>
-            <p class="text-lg text-white">Heilbronn DE</p>
-            <button class="mt-2 px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded shadow">Buy Ticket</button>
+        {#each data.events as event }
+          <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
+            <p class="text-lg text-white">{ event.date }</p>
+            <div class="md:min-w-[350px]">
+              <p class="text-lg text-white">
+                {#if event.event_name}
+                  { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
+                {:else }
+                  { event.location }
+                {/if}
+              </p>
+              <p class="text-lg text-white font-thin">{ event.city } <span
+                class="font-thin">{ getFlagEmoji(event.country_code.toLowerCase()) }</span></p>
+              <button class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">
+                Buy Ticket
+              </button>
+            </div>
           </div>
+        {/each}
+        <div class="flex justify-center py-2 font-krete italic text-gray-300 text-2xl mt-10">
+          Our Dance Has Turned Into Mourning
         </div>
-        <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
-          <p class="text-lg text-white">21.02.23</p>
-          <div>
-            <p class="text-lg text-white">Blast of Eternity Festival</p>
-            <p class="text-lg text-white">Heilbronn DE</p>
-            <button class="mt-2 px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded shadow">Buy Ticket</button>
-          </div>
+        <div class="flex justify-center py-2">
+          <Heptagram />
         </div>
       </div>
     </div>
   </aside>
+  <div class="flex w-full">
+    <div class="v-full flex-grow max-xl:hidden ">
+      <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
+        <p>
+          Blessed Are Those Who Mourn
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
