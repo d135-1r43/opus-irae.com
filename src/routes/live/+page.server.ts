@@ -7,15 +7,15 @@ export const load: PageLoad = async ({ fetch }) => {
 	const events = await eventsRes.json();
 
 	const today: Date = new Date();
-  today.setHours(0, 0, 0, 0);
+	today.setHours(0, 0, 0, 0);
 
-  const pastEvents = events.data.events.filter((event: { date: string }): boolean => {
-    const eventDate: Date = new Date(event.date);
+	const pastEvents = events.data.events.filter((event: { date: string }): boolean => {
+		const eventDate: Date = new Date(event.date);
 		return eventDate < today;
 	});
 
-  const futureEvents = events.data.events.filter((event: { date: string }): boolean => {
-    const eventDate: Date = new Date(event.date);
+	const futureEvents = events.data.events.filter((event: { date: string }): boolean => {
+		const eventDate: Date = new Date(event.date);
 		return eventDate >= today;
 	});
 

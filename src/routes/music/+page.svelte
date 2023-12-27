@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import { _getImageUrl } from "./+page";
 
   import Heptagram from "$lib/components/icons/heptagram.svelte";
   import Title from "$lib/components/title.svelte";
@@ -22,6 +21,10 @@
       // more than a year ago
       return date.getFullYear().toString();
     }
+  }
+
+  function getImageUrl(uuid: string): string {
+    return "https://directus.herhoffer.net/assets/" + uuid;
   }
 </script>
 
@@ -46,7 +49,7 @@
               alt="{title} Cover" width="500" height="500" decoding="async" data-nimg="1"
               class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
               style="color: transparent;"
-              src="{ _getImageUrl(cover)}">
+              src="{ getImageUrl(cover)}">
             <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
               <h3 class="font-krete text-xl mt-8">{title}</h3>
               <p class="pt-0.5 font-krete text-m">{type} · {formatDate(release_date)} · {label}</p>
