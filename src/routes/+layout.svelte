@@ -1,5 +1,7 @@
 <script lang="ts">
   import { browser } from "$app/environment";
+  import { onNavigate } from "$app/navigation";
+
   import { QueryClient, QueryClientProvider } from "@tanstack/svelte-query";
   import "../app.css";
 
@@ -9,6 +11,16 @@
         enabled: browser
       }
     }
+  });
+
+  onNavigate((navigation) => {
+    if (!(document as any).startViewTransition) return;
+    return new Promise((resolve) => {
+      (document as any).startViewTransition(async () => {
+        resolve();
+        await navigation.complete;
+      });
+    });
   });
 </script>
 
@@ -21,3 +33,29 @@
     <slot />
   </div>
 </QueryClientProvider>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-from-right {
+    from {
+      transform: translateX(30px);
+    }
+  }
+
+  @keyframes slide-to-left {
+    to {
+      transform: translateX(-30px);
+    }
+  }
+</style>
