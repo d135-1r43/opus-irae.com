@@ -4,6 +4,7 @@
 
 <svelte:head>
   <title>Opus Iræ</title>
+  <meta name="description" content="Symphonic and Black Metal from Germany" />
 </svelte:head>
 
 <template>
