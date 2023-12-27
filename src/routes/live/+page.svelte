@@ -90,6 +90,9 @@
             </div>
           </div>
         {/each}
+        <div class="flex justify-center pt-2 pb-10">
+          <Heptagram />
+        </div>
       </div>
     </div>
   </aside>
