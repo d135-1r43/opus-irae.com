@@ -10,7 +10,7 @@
     © {currentYear} Opus Iræ & Endtime Productions AB
   </span>
       <span class="flex flex-wrap items-center mt-3 text-xs font-medium text-gray-600 sm:mt-0">
-      <a href="#" class="mr-2 hover:underline md:mr-2 md:ml-10">Impress & Privacy Policy</a>
+      <a href="impress" class="mr-2 hover:underline md:mr-2 md:ml-10">Impress & Privacy Policy</a>
   </span>
     </footer>
   </div>
