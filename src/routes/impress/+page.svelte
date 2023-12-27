@@ -41,9 +41,11 @@
   :global(h2) {
     @apply text-xl mb-3 mt-5 font-bold;
   }
+
   :global(h3) {
     @apply text-lg mb-3 mt-5 font-bold;
   }
+
   :global(p) {
     @apply py-2;
   }
