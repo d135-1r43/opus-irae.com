@@ -1,11 +1,34 @@
 <script lang="ts">
+  import type { PageData } from "./$types";
+
   import NavMain from "$lib/components/nav-main.svelte";
+  import { MetaTags } from "svelte-meta-tags";
+
+  export let data: PageData;
+
+  function getImageUrl(uuid: string): string {
+    return "https://directus.herhoffer.net/assets/" + uuid;
+  }
 </script>
 
-<svelte:head>
-  <title>Opus Iræ</title>
-  <meta name="description" content="Symphonic and Black Metal from Germany" />
-</svelte:head>
+<MetaTags
+  title="{data.band.name}"
+  description="{data.band.short_description}"
+  openGraph={{
+    url: data.band.website,
+    title: data.band.name,
+    description: data.band.short_description,
+    images: [
+      {
+        url: getImageUrl(data.band.hero_image),
+        width: data.hero.width,
+        height: data.hero.height,
+        alt: data.hero.description
+      }
+    ],
+    siteName: data.band.name
+  }}
+/>
 
 <template>
   <div class="flex w-full h-full">
