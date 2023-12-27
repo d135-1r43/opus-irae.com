@@ -31,7 +31,7 @@ jobs:
         tags: ghcr.io/d135-1r43/opusirae:latest
 
     - name: Call a webhook for Portainer
-      uses: distributhor/workflow-webhook@v1
+      uses: distributhor/workflow-webhook@v3
       env:
         webhook_type: 'json'
         webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
