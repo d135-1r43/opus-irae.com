@@ -11,6 +11,10 @@
   }
 </script>
 
+<svelte:head>
+  <meta name="theme-color" content="#182736" />
+</svelte:head>
+
 <MetaTags
   title="{data.band.name}"
   description="{data.band.short_description}"
