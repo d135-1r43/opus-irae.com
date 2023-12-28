@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tanstack/svelte-query':
-    specifier: ^5.14.1
-    version: 5.14.1(svelte@4.2.8)
+    specifier: ^5.15.0
+    version: 5.15.0(svelte@4.2.8)
 
 devDependencies:
   '@playwright-testing-library/test':
@@ -775,16 +775,16 @@ packages:
       tailwindcss: 3.3.6
     dev: true
 
-  /@tanstack/query-core@5.14.1:
-    resolution: {integrity: sha512-TlZarySCVEiap4K7BCvrsYZnX7jBbEkR55YMrk8ELcRbuAx6ydL+qoxqUt8Fq8VMvQyGt52icn6T7eJL1Q35KQ==}
+  /@tanstack/query-core@5.14.2:
+    resolution: {integrity: sha512-QmoJvC72sSWs3hgGis8JdmlDvqLfYGWUK4UG6OR9Q6t28JMN9m2FDwKPqoSJ9YVocELCSjMt/FGjEiLfk8000Q==}
     dev: false
 
-  /@tanstack/svelte-query@5.14.1(svelte@4.2.8):
-    resolution: {integrity: sha512-6lEkaW9vZCjjOhDNL3kD4OJ/gQnWbWv/CW46Wv7//AliIDWIeq/VM32MIU/MB6W23SJqheG2eRCZsLjuVHco5Q==}
+  /@tanstack/svelte-query@5.15.0(svelte@4.2.8):
+    resolution: {integrity: sha512-HlDg8uN9heF8ZJH6oJtZlBQjV++jdvyS3Rd4B+bp86RVxgrAjrr4LmKNqBhfOjNWHGmLTNEmzpdvg8QtzGZKhg==}
     peerDependencies:
       svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.0
     dependencies:
-      '@tanstack/query-core': 5.14.1
+      '@tanstack/query-core': 5.14.2
       svelte: 4.2.8
     dev: false
 

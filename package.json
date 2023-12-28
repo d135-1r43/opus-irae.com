@@ -21,7 +21,7 @@
     "check:all": "yarn format && yarn lint"
   },
   "dependencies": {
-    "@tanstack/svelte-query": "^5.14.1"
+    "@tanstack/svelte-query": "^5.15.0"
   },
   "devDependencies": {
     "@playwright-testing-library/test": "^4.5.0",
