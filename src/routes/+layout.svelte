@@ -24,6 +24,10 @@
   });
 </script>
 
+<svelte:head>
+  <meta name="theme-color" content="#182736" />
+</svelte:head>
+
 <QueryClientProvider client={queryClient}>
   <div class="sticky top-0 right-0 h-screen md:col-span-5 2xl:col-span-6">
     <img alt="Blue Background with Clouds and Stars" decoding="sync"
