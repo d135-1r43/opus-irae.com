@@ -19,7 +19,5 @@ export const load: PageLoad = async ({ fetch: fetch }) => {
 		socials.set(link.media, link);
 	});
 
-  console.log(socials);
-
 	return { band: bandJson.data, hero: fileJson.data, socials: socials };
 };

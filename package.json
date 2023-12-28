@@ -18,10 +18,7 @@
     "test:watch": "vitest",
     "test:browser": "playwright test",
     "coverage": "vitest run --coverage",
-    "check:all": "yarn format && yarn lint"
-  },
-  "dependencies": {
-    "@tanstack/svelte-query": "^5.14.1"
+    "check:all": "pnpm format && pnpm lint"
   },
   "devDependencies": {
     "@playwright-testing-library/test": "^4.5.0",

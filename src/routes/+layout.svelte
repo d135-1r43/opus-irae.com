@@ -1,17 +1,8 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { onNavigate } from "$app/navigation";
 
-  import { QueryClient, QueryClientProvider } from "@tanstack/svelte-query";
   import "../app.css";
 
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        enabled: browser
-      }
-    }
-  });
 
   onNavigate((navigation) => {
     if (!(document as any).startViewTransition) return;
@@ -28,7 +19,7 @@
   <meta name="theme-color" content="#182736" />
 </svelte:head>
 
-<QueryClientProvider client={queryClient}>
+<template>
   <div class="sticky top-0 right-0 h-screen md:col-span-5 2xl:col-span-6">
     <img alt="Blue Background with Clouds and Stars" decoding="sync"
          class="md:block object-cover transition-opacity bg-black opacity-95 -z-10"
@@ -36,30 +27,30 @@
          src="background-kw.webp">
     <slot />
   </div>
-</QueryClientProvider>
+</template>
 
 <style>
-  @keyframes fade-in {
-    from {
-      opacity: 0;
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
     }
-  }
 
-  @keyframes fade-out {
-    to {
-      opacity: 0;
+    @keyframes fade-out {
+        to {
+            opacity: 0;
+        }
     }
-  }
 
-  @keyframes slide-from-right {
-    from {
-      transform: translateX(30px);
+    @keyframes slide-from-right {
+        from {
+            transform: translateX(30px);
+        }
     }
-  }
 
-  @keyframes slide-to-left {
-    to {
-      transform: translateX(-30px);
+    @keyframes slide-to-left {
+        to {
+            transform: translateX(-30px);
+        }
     }
-  }
 </style>
