@@ -3,6 +3,7 @@
 
   import { MetaTags } from "svelte-meta-tags";
   import Spotify from "$lib/components/socials/spotify.svelte";
+  import Apple from "$lib/components/socials/apple.svelte";
   import Bandcamp from "$lib/components/socials/bandcamp.svelte";
   import Footer from "$lib/components/footer.svelte";
   import NavItem from "$lib/components/navitem.svelte";
@@ -62,9 +63,10 @@
         <NavItem text="Contact" href="/contact" />
       </nav>
       <div class="flex py-5 pl-7">
-        <Spotify href="https://open.spotify.com/artist/3AFQQ6CRoysoxWfUGjnosX?si=lVLIkZ-GRpCJ8PHWAx2X-A" />
-        <Bandcamp href="https://opusirae.bandcamp.com/" />
-        <Instagram href="https://www.instagram.com/opusirae/" />
+        <Bandcamp href="{data.socials.get('bandcamp').url}" />
+        <Spotify href="{data.socials.get('spotify').url}" />
+        <Apple href="{data.socials.get('apple_music').url}" />
+        <Instagram href="{ data.socials.get('instagram').url}" />
       </div>
       <Footer />
     </aside>

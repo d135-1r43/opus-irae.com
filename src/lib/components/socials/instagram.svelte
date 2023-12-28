@@ -5,9 +5,9 @@
 <template>
   <a href="{href}" target="_blank" rel="noopener noreferrer" class="inline-block">
     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="
-    fill-gray-400 text-2xl block leading-[55px]
+    fill-gray-400 text-xl block leading-[55px]
     hover:opacity-60
-    mr-2
+    mr-4
     transition-opacity duration-300">
       <title>Instagram</title>
       <!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
