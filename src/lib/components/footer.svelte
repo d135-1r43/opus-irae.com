@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   // Get the current year
   const currentYear = new Date().getFullYear();
 </script>
