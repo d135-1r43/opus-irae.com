@@ -50,7 +50,7 @@
         {/if}
 
         {#each data.futureEvents as event }
-          <div class="flex flex-col md:flex-row justify-between px-4 py-2 border-b border-white">
+          <div class="flex flex-col md:flex-row justify-between px-4 py-2 pb-10">
             <p class="text-lg text-white">{ formatDate(event.date) }</p>
             <div class="md:min-w-[350px]">
               <p class="text-lg text-white">
@@ -59,12 +59,20 @@
                 {:else }
                   { event.location }
                 {/if}
+                {#if event.special}
+                  &nbsp;&middot;&nbsp;<span class="italic">{ event.special }</span>
+                {/if}
               </p>
               <p class="text-lg text-white font-thin">{ event.city }
                 <span class="font-thin">{ getFlagEmoji(event.country_code.toLowerCase()) }</span></p>
-              <button class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">
-                Buy Ticket
-              </button>
+              {#if event.ticket_link}
+                <a href="{event.ticket_link}">
+                  <button
+                    class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">
+                    Buy Ticket
+                  </button>
+                </a>
+              {/if}
             </div>
           </div>
         {/each}
@@ -83,6 +91,9 @@
                   { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
                 {:else }
                   { event.location }
+                {/if}
+                {#if event.special}
+                  &nbsp;&middot;&nbsp;<span class="italic">{ event.special }</span>
                 {/if}
               </p>
               <p class="text-lg text-white font-thin">{ event.city } <span
