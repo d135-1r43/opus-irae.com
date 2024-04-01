@@ -24,7 +24,7 @@
     <img alt="Blue Background with Clouds and Stars" decoding="sync"
          class="md:block object-cover transition-opacity bg-black opacity-95 -z-10"
          style="position: fixed; height: 100%; width: 100%; inset: 0px" sizes="100vw"
-         src="background-kw.webp">
+         src="/background-kw.webp">
     <slot />
   </div>
 </template>
