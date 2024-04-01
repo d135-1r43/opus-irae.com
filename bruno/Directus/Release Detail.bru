@@ -1,0 +1,17 @@
+meta {
+  name: Release Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://directus.herhoffer.net/items/release/?band=1&filter[status][_eq]=published&filter[slug][_eq]=the-burden-of-man
+  body: none
+  auth: none
+}
+
+query {
+  band: 1
+  filter[status][_eq]: published
+  filter[slug][_eq]: the-burden-of-man
+}
