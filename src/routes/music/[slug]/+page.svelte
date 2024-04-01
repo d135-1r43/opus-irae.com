@@ -7,6 +7,7 @@
   import Title from "$lib/components/title.svelte";
   import Spotify from "$lib/components/socials/spotify.svelte";
   import Bandcamp from "$lib/components/socials/bandcamp.svelte";
+  import Apple from "$lib/components/socials/apple.svelte";
 
   export let data: PageData;
 
@@ -42,6 +43,7 @@
             <p class="pt-3 pb-10">
               <Bandcamp href="{data.release.bandcamp_url}" />
               <Spotify href="{data.release.spotify_url}" />
+              <Apple href="{data.release.apple_url}" />
             </p>
           </div>
           {#if data.release.bandcamp_id}
@@ -62,8 +64,8 @@
     <div class="v-full flex-grow max-xl:hidden ">
       <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
         <p>
-          But who may abide the day of His coming?<br />
-          And who shall stand when He appeareth?
+          The Frontline is bleeding as the Emperor watches.<br />
+          Who are You, now Stranger?
         </p>
       </div>
     </div>
