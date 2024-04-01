@@ -69,7 +69,7 @@
                 <a href="{event.ticket_link}">
                   <button
                     class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">
-                    Buy Ticket
+                    Tickets
                   </button>
                 </a>
               {/if}
