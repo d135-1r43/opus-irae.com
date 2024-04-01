@@ -5,8 +5,10 @@
 
   import Heptagram from "$lib/components/icons/heptagram.svelte";
   import Title from "$lib/components/title.svelte";
+
   import Spotify from "$lib/components/socials/spotify.svelte";
   import Bandcamp from "$lib/components/socials/bandcamp.svelte";
+  import Apple from "$lib/components/socials/apple.svelte";
 
   export let data: PageData;
 
@@ -29,7 +31,7 @@
     <Title />
 
     <div class="flex flex-col px-5 grow">
-      {#each data.releases.data as { title, type, release_date, label, cover, bandcamp_url, spotify_url, slug }}
+      {#each data.releases.data as { title, type, release_date, label, cover, bandcamp_url, spotify_url, apple_url, slug }}
         <div class="space-y-xl px-0 py-5 md:p-10">
           <a class="block space-y-3 group" href="{'music/' + slug}">
             <img
@@ -43,11 +45,12 @@
               <p class="pt-3">
                 <Bandcamp href="{bandcamp_url}" />
                 <Spotify href="{spotify_url}" />
+                <Apple href="{apple_url}" />
               </p>
             </div>
           </a>
         </div>
-        <div class="flex justify-center py-2">
+        <div class="flex justify-center py-2 pb-10">
           <Heptagram />
         </div>
       {/each}
