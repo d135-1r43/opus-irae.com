@@ -29,28 +29,32 @@
     <Title />
 
     <div class="flex flex-col px-5 grow">
-      {#each data.releases.data as { title, type, release_date, label, cover, bandcamp_url, spotify_url }}
-        <div class="space-y-xl px-0 py-5 md:p-10">
-          <a class="block space-y-3 group" href="/">
-            <img
-              alt="{title} Cover" width="500" height="500" decoding="async" data-nimg="1"
-              class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
-              style="color: transparent;"
-              src="{ getImageUrl(cover)}">
-            <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
-              <h3 class="font-krete text-xl mt-8">{title}</h3>
-              <p class="pt-0.5 font-krete text-m">{type} · {FormatUtils.formatDate(release_date)} · {label}</p>
-              <p class="pt-3">
-                <Bandcamp href="{bandcamp_url}" />
-                <Spotify href="{spotify_url}" />
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="flex justify-center py-2">
-          <Heptagram />
-        </div>
-      {/each}
+      <div class="space-y-xl px-0 py-5 md:p-10">
+          <img
+            alt="{data.release.title} Cover" width="500" height="500" decoding="async" data-nimg="1"
+            class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
+            style="color: transparent;"
+            src="{ getImageUrl(data.release.cover)}">
+          <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
+            <h3 class="font-krete text-xl mt-8">{data.release.title}</h3>
+            <p class="pt-0.5 font-krete text-m">{data.release.type}
+              · {FormatUtils.formatFullDate(data.release.release_date)} · {data.release.label}</p>
+            <p class="pt-3 pb-10">
+              <Bandcamp href="{data.release.bandcamp_url}" />
+              <Spotify href="{data.release.spotify_url}" />
+            </p>
+          </div>
+          {#if data.release.bandcamp_id}
+            <iframe title="{data.release.title} on Bandcamp" style="border: 0; width: 100%; height: 406px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=2167011037/size=large/bgcol=000000/linkcol=0687f5/artwork=none/transparent=true/"
+                    seamless>
+              <a href="https://vrsnsmv.bandcamp.com/album/vade-retro">{data.release.title}</a>
+            </iframe>
+          {/if}
+      </div>
+      <div class="flex justify-center py-2 mb-20">
+        <Heptagram />
+      </div>
     </div>
   </aside>
 

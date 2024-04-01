@@ -29,9 +29,9 @@
     <Title />
 
     <div class="flex flex-col px-5 grow">
-      {#each data.releases.data as { title, type, release_date, label, cover, bandcamp_url, spotify_url }}
+      {#each data.releases.data as { title, type, release_date, label, cover, bandcamp_url, spotify_url, slug }}
         <div class="space-y-xl px-0 py-5 md:p-10">
-          <a class="block space-y-3 group" href="/">
+          <a class="block space-y-3 group" href="{'music/' + slug}">
             <img
               alt="{title} Cover" width="500" height="500" decoding="async" data-nimg="1"
               class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
@@ -39,7 +39,7 @@
               src="{ getImageUrl(cover)}">
             <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
               <h3 class="font-krete text-xl mt-8">{title}</h3>
-              <p class="pt-0.5 font-krete text-m">{type} · {FormatUtils.formatDate(release_date)} · {label}</p>
+              <p class="pt-0.5 font-krete text-m">{type} · {FormatUtils.formatShortDate(release_date)} · {label}</p>
               <p class="pt-3">
                 <Bandcamp href="{bandcamp_url}" />
                 <Spotify href="{spotify_url}" />
