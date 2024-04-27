@@ -9,10 +9,10 @@ export const load: PageLoad = async ({ fetch: fetch }) => {
 	const bandJson: any = await bandJsonResponse.json();
 	const heroImageUuid: string = bandJson.data.hero_image;
 
-	const heroImageFileRsponse: Response = await fetch(
+	const heroImageFileResponse: Response = await fetch(
 		`https://directus.herhoffer.net/files/` + heroImageUuid
 	);
-	const fileJson: any = await heroImageFileRsponse.json();
+	const fileJson: any = await heroImageFileResponse.json();
 
 	const socials: Map<any, any> = new Map();
 	bandJson.data.links.forEach((link: any) => {

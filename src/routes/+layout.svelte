@@ -3,7 +3,6 @@
 
   import "../app.css";
 
-
   onNavigate((navigation) => {
     if (!(document as any).startViewTransition) return;
     return new Promise((resolve) => {
