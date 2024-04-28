@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onNavigate } from "$app/navigation";
+  import type { PageData } from './$types';
 
   import "../app.css";
 
@@ -12,9 +13,16 @@
       });
     });
   });
+
+  function getAssetUrl(uuid: string): string {
+    return 'https://directus.herhoffer.net/assets/' + uuid;
+  }
+
+  export let data: PageData;
 </script>
 
 <svelte:head>
+  <link rel="icon" href="{getAssetUrl(data.band.favicon)}" />
   <meta name="theme-color" content="#182736" />
 </svelte:head>
 
