@@ -2,12 +2,14 @@
   import type { PageData } from "./$types";
 
   import { MetaTags } from "svelte-meta-tags";
+
   import Spotify from "$lib/components/socials/spotify.svelte";
   import Apple from "$lib/components/socials/apple.svelte";
   import Bandcamp from "$lib/components/socials/bandcamp.svelte";
   import Footer from "$lib/components/footer.svelte";
   import NavItem from "$lib/components/navitem.svelte";
   import Instagram from "$lib/components/socials/instagram.svelte";
+  import Logo from "$lib/components/logo.svelte";
 
   export let data: PageData;
 
@@ -47,14 +49,13 @@
       <h1
         class="
         p-6 pb-1.5
-        font-trajan tracking-wider
-        text-3xl
-        md:text-6xl
         md:pb-4
         hover:opacity-60
         transition-opacity duration-300
         md:relative md:-left-1">
-        <a href="/">Opus Iræ</a>
+        <a href="{data.band.website}">
+          <Logo />
+        </a>
       </h1>
       <nav class="flex flex-col py-5 pl-7">
         <NavItem text="Discography" href="/music" />
