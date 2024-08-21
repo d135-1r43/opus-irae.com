@@ -52,15 +52,15 @@
         {#each data.futureEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-2 pb-10">
             <p class="text-lg text-white">{ formatDate(event.date) }</p>
-            <div class="md:min-w-[350px]">
-              <p class="text-lg text-white">
+            <div class="md:min-w-[350px] md:max-w-[350px] overflow-hidden">
+              <p class="text-lg text-white break-words">
                 {#if event.event_name}
                   { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
                 {:else }
                   { event.location }
                 {/if}
                 {#if event.special}
-                  &nbsp;&middot;&nbsp;<span class="italic">{ event.special }</span>
+                  <br/><span class="italic">{ event.special }</span>
                 {/if}
               </p>
               <p class="text-lg text-white font-thin">{ event.city }
@@ -85,15 +85,15 @@
         {#each data.pastEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-4">
             <p class="text-lg text-white">{ formatDate(event.date) }</p>
-            <div class="md:min-w-[350px]">
-              <p class="text-lg text-white">
+            <div class="md:min-w-[350px] overflow-hidden">
+              <p class="text-lg text-white break-words">
                 {#if event.event_name}
                   { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
                 {:else }
                   { event.location }
                 {/if}
                 {#if event.special}
-                  &nbsp;&middot;&nbsp;<span class="italic">{ event.special }</span>
+                  <br/><span class="italic">{ event.special }</span>
                 {/if}
               </p>
               <p class="text-lg text-white font-thin">{ event.city } <span
