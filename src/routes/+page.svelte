@@ -48,11 +48,16 @@
       ">
       <h1
         class="
-        p-6 pb-1.5
-        md:pb-4
-        hover:opacity-60
-        transition-opacity duration-300
-        md:relative md:-left-1">
+          mx-auto
+          w-3/5
+          md:w-full
+
+          p-6 pb-1.5
+          md:pb-4
+
+          hover:opacity-60
+          transition-opacity duration-300">
+
         <a href="{data.band.website}">
           <Logo />
         </a>
