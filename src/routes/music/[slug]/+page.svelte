@@ -48,7 +48,7 @@
           </div>
           {#if data.release.bandcamp_id}
             <iframe title="{data.release.title} on Bandcamp" style="border: 0; width: 100%; height: 406px;"
-                    src="https://bandcamp.com/EmbeddedPlayer/album=2167011037/size=large/bgcol=000000/linkcol=0687f5/artwork=none/transparent=true/"
+                    src="https://bandcamp.com/EmbeddedPlayer/album={data.release.bandcamp_id}/size=large/bgcol=000000/linkcol=0687f5/artwork=none/transparent=true/"
                     seamless>
               <a href="https://vrsnsmv.bandcamp.com/album/vade-retro">{data.release.title}</a>
             </iframe>
@@ -64,7 +64,7 @@
     <div class="v-full flex-grow max-xl:hidden ">
       <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
         <p>
-          The Frontline is bleeding as the Emperor watches.<br />
+          The Front Line is bleeding as the Emperor watches.<br />
           Who are You, now Stranger?
         </p>
       </div>
