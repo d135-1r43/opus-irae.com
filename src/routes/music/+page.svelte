@@ -36,7 +36,8 @@
           <a class="block space-y-3 group" href="{'music/' + slug}">
             <img
               alt="{title} Cover" width="500" height="500" decoding="async" data-nimg="1"
-              class="w-full aspect-square object-cover rounded group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
+              class="w-full aspect-square object-cover border-2 border-gray-600
+                    group-hover:scale-[.99] group-hover:brightness-75 transition-transform-filter ease-in-out duration-500"
               style="color: transparent;"
               src="{ getImageUrl(cover)}">
             <div class="text-center group-hover:opacity-60 transition-opacity duration-500">
