@@ -15,8 +15,9 @@
   }
 
   function formatDate(datestring: string): string {
-    let date: Date = new Date(datestring);
-    return Intl.DateTimeFormat().format(date);
+    const date: Date = new Date(datestring);
+    const userLocale: string = navigator.language || 'en-US';
+    return Intl.DateTimeFormat(userLocale).format(date);
   }
 </script>
 
@@ -43,7 +44,7 @@
           <Heptagram />
         </div>
 
-        {#if data.futureEvents.length == 0 }
+        {#if data.futureEvents.length === 0 }
           <div class="flex justify-center py-2 font-krete text-white text-lg font-thin mb-20 p-20 text-center">
             No one knows about that day or hour, not even the angels in heaven, nor the Son, but only the Father.
           </div>

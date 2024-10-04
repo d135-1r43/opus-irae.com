@@ -25,5 +25,9 @@ export const load: PageLoad = async ({ fetch }) => {
 		return eventDate >= today;
 	});
 
+	futureEvents.sort((a: { date: string }, b: { date: string }): number => {
+		return new Date(a.date).getTime() - new Date(b.date).getTime();
+	});
+
 	return { pastEvents: pastEvents, futureEvents: futureEvents };
 };
