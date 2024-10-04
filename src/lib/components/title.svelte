@@ -1,3 +1,8 @@
+<script lang="ts">
+  import Back from "$lib/components/icons/back.svelte";
+</script>
+
+
 <template>
   <h1
     class="
@@ -9,6 +14,8 @@
         hover:opacity-60
         transition-opacity duration-300
         md:relative md:-left-1">
-    <a href="/">Opus Iræ</a>
+    <a href="/" class="flex items-center space-x-1">
+      <Back />
+      Opus Iræ</a>
   </h1>
 </template>
