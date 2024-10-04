@@ -42,9 +42,9 @@
             <p class="pt-0.5 font-krete text-m">{data.release.type}
               · {FormatUtils.formatFullDate(data.release.release_date)} · {data.release.label}</p>
             <p class="pt-3 pb-10">
-              <Bandcamp href="{data.release.bandcamp_url}" />
-              <Spotify href="{data.release.spotify_url}" />
-              <Apple href="{data.release.apple_url}" />
+              {#if data.release.bandcamp_url}<Bandcamp href="{data.release.bandcamp_url}"/>{/if}
+              {#if data.release.spotify_url}<Spotify href="{data.release.spotify_url}"/>{/if}
+              {#if data.release.apple_url}<Apple href="{data.release.apple_url}"/>{/if}
             </p>
           </div>
           {#if data.release.bandcamp_id}

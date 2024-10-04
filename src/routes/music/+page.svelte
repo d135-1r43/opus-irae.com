@@ -44,9 +44,9 @@
               <h3 class="font-krete text-xl mt-8">{title}</h3>
               <p class="pt-0.5 font-krete text-m">{type} · {FormatUtils.formatShortDate(release_date)} · {label}</p>
               <p class="pt-3">
-                <Bandcamp href="{bandcamp_url}" />
-                <Spotify href="{spotify_url}" />
-                <Apple href="{apple_url}" />
+                {#if bandcamp_url}<Bandcamp href="{bandcamp_url}" />{/if}
+                {#if spotify_url}<Spotify href="{spotify_url}" />{/if}
+                {#if apple_url}<Apple href="{apple_url}" />{/if}
               </p>
             </div>
           </a>
