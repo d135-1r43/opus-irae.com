@@ -33,7 +33,7 @@ importers:
         specifier: ~7.18.0
         version: 7.18.0(eslint@8.57.0)(typescript@5.5.4)
       '@vitest/ui':
-        specifier: ^1.2.2
+        specifier: ^1.4.0
         version: 1.4.0(vitest@1.4.0)
       autoprefixer:
         specifier: ^10.4.20
@@ -96,7 +96,7 @@ importers:
         specifier: ^5.4.8
         version: 5.4.8(@types/node@20.10.4)
       vitest:
-        specifier: ^1.2.2
+        specifier: ^1.4.0
         version: 1.4.0(@types/node@20.10.4)(@vitest/ui@1.4.0)(jsdom@25.0.0)
       vitest-dom:
         specifier: ^0.1.1
@@ -785,8 +785,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001659:
-    resolution: {integrity: sha512-Qxxyfv3RdHAfJcXelgf0hU4DFUVXBGTjqrBUZLUh8AtlGnsDo+CnncYtTd95+ZKfnANUOzxyIQCuU/UeBZBYoA==}
+  caniuse-lite@1.0.30001667:
+    resolution: {integrity: sha512-7LTwJjcRkzKFmtqGsibMeuXmvFDfZq/nzIjnmgCGzKKRVzjD72selLDK1oPF/Oxzmt4fNcPvTDvGqSDG4tCALw==}
 
   chai@4.3.10:
     resolution: {integrity: sha512-0UXG04VuVbruMUYbJ6JctvH0YnC/4q3/AkT18q4NaITo91CUm0liMS9VqzT9vZhVQ/1eqPanMWjBM+Juhfb/9g==}
@@ -2866,7 +2866,7 @@ snapshots:
   autoprefixer@10.4.20(postcss@8.4.47):
     dependencies:
       browserslist: 4.23.3
-      caniuse-lite: 1.0.30001659
+      caniuse-lite: 1.0.30001667
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -2896,7 +2896,7 @@ snapshots:
 
   browserslist@4.23.3:
     dependencies:
-      caniuse-lite: 1.0.30001659
+      caniuse-lite: 1.0.30001667
       electron-to-chromium: 1.5.18
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
@@ -2923,7 +2923,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001659: {}
+  caniuse-lite@1.0.30001667: {}
 
   chai@4.3.10:
     dependencies:

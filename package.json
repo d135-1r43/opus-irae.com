@@ -29,8 +29,8 @@
     "@tailwindcss/typography": "^0.5.15",
     "@typescript-eslint/eslint-plugin": "~7.18.0",
     "@typescript-eslint/parser": "~7.18.0",
+    "@vitest/ui": "^1.4.0",
     "autoprefixer": "^10.4.20",
-    "@vitest/ui": "^1.2.2",
     "c8": "^10.1.2",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -50,7 +50,7 @@
     "tslib": "^2.7.0",
     "typescript": "~5.5.4",
     "vite": "^5.4.8",
-    "vitest": "^1.2.2",
+    "vitest": "^1.4.0",
     "vitest-dom": "^0.1.1"
   },
   "type": "module"
