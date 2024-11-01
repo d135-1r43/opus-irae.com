@@ -11,7 +11,11 @@
   import Instagram from "$lib/components/socials/instagram.svelte";
   import Logo from "$lib/components/logo.svelte";
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
 
   function getImageUrl(uuid: string): string {
     return "https://directus.herhoffer.net/assets/" + uuid;

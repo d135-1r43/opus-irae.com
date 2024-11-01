@@ -4,7 +4,11 @@
 
   import type { PageData } from "./$types";
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
 
   let galleryCols = Array(3).fill(0);
   let galleryRows = Array(4).fill(0);
@@ -42,7 +46,7 @@
            src="{getImageUrl(data.band.data.hero_image)}"
            alt="Opus Iræ">
       <p class="flex justify-center py-2 p-10 font-krete text-md text-center">
-        {@html format(data.band.data.info_text) }
+        {@html format(data.band.data.info_text)}
       </p>
       <div class="flex justify-center py-2 mt-10 mb-10">
         <Heptagram />

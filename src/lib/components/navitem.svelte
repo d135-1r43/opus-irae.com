@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let text: string = 'DEFAULT';
-  export let href: string = '/';
+  interface Props {
+    text?: string;
+    href?: string;
+  }
+
+  let { text = 'DEFAULT', href = '/' }: Props = $props();
 </script>
 
 <template>

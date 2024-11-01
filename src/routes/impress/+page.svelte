@@ -4,7 +4,11 @@
 
   import type { PageData } from "./$types";
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -24,11 +28,11 @@
     <div>
       <h1 class="p-10 text-2xl font-krete font-bold">Impressum</h1>
       <div class="px-10 font-krete font-normal text-md mt-0">
-        {@html data.texts.data.impress }
+        {@html data.texts.data.impress}
       </div>
       <h1 class="p-10 text-2xl font-krete font-bold">Datenschutz&shy;erkl&auml;rung</h1>
       <div class="px-10 font-krete font-normal text-md mt-0">
-        {@html data.texts.data.datenschutz }
+        {@html data.texts.data.datenschutz}
       </div>
       <div class="flex justify-center py-2 mb-10">
         <Heptagram />

@@ -10,7 +10,11 @@
   import Bandcamp from "$lib/components/socials/bandcamp.svelte";
   import Apple from "$lib/components/socials/apple.svelte";
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
 
   function getImageUrl(uuid: string): string {
     return "https://directus.herhoffer.net/assets/" + uuid;

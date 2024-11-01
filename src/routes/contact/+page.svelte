@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { preventDefault } from 'svelte/legacy';
+
   import Title from "$lib/components/title.svelte";
   import Heptagram from "$lib/components/icons/heptagram.svelte";
 
-  let statusText: string = "";
+  let statusText: string = $state("");
 
   const handleSubmit = async data => {
     statusText = "Submitting...";
@@ -48,7 +50,7 @@
         engage with us through our social media platforms.</p>
     </div>
 
-    <form on:submit|preventDefault={handleSubmit} class="text-black font-krete p-10">
+    <form onsubmit={preventDefault(handleSubmit)} class="text-black font-krete p-10">
       <input type="hidden" name="access_key" value="b04efb2e-092c-4804-986f-18cd57cf1806">
       <div class="mb-4">
         <input class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"

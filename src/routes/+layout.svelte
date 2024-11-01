@@ -18,7 +18,12 @@
     return 'https://directus.herhoffer.net/assets/' + uuid;
   }
 
-  export let data: PageData;
+  interface Props {
+    data: PageData;
+    children?: import('svelte').Snippet;
+  }
+
+  let { data, children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -32,7 +37,7 @@
          class="md:block object-cover transition-opacity bg-black opacity-95 -z-10"
          style="position: fixed; height: 100%; width: 100%; inset: 0px" sizes="100vw"
          src="/background-kw.webp">
-    <slot />
+    {@render children?.()}
   </div>
 </template>
 
