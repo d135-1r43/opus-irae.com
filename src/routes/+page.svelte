@@ -23,8 +23,8 @@
 </script>
 
 <MetaTags
-  title="{data.band.name}"
-  description="{data.band.short_description}"
+  title={data.band.name}
+  description={data.band.short_description}
   openGraph={{
     url: data.band.website,
     title: data.band.name,
@@ -73,10 +73,10 @@
         <NavItem text="Contact" href="/contact" />
       </nav>
       <div class="flex py-5 pl-7">
-        <Bandcamp href="{data.socials.get('bandcamp').url}" />
-        <Spotify href="{data.socials.get('spotify').url}" />
-        <Apple href="{data.socials.get('apple_music').url}" />
-        <Instagram href="{ data.socials.get('instagram').url}" />
+        <Bandcamp href={data.socials.get('bandcamp').url} />
+        <Spotify href={data.socials.get('spotify').url} />
+        <Apple href={data.socials.get('apple_music').url} />
+        <Instagram href={data.socials.get('instagram').url} />
       </div>
       <Footer />
     </aside>
