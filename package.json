@@ -27,7 +27,7 @@
     "@sveltejs/kit": "^2.15.1",
     "@sveltejs/vite-plugin-svelte": "^4.0.4",
     "@tailwindcss/typography": "^0.5.16",
-    "@typescript-eslint/eslint-plugin": "~8.19.1",
+    "@typescript-eslint/eslint-plugin": "~8.22.0",
     "@typescript-eslint/parser": "~8.19.1",
     "@vitest/ui": "^2.1.4",
     "autoprefixer": "^10.4.20",
