@@ -39,7 +39,7 @@
     "playwright-testing-library": "^4.5.0",
     "postcss": "^8.5.1",
     "postcss-load-config": "^6.0.1",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.3",
     "prettier-plugin-svelte": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "svelte": "^5.19.6",
