@@ -16,10 +16,10 @@ importers:
         version: 1.51.0
       '@sveltejs/adapter-node':
         specifier: ^5.2.12
-        version: 5.2.12(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))
+        version: 5.2.12(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))
       '@sveltejs/kit':
-        specifier: ^2.17.3
-        version: 2.17.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))
+        specifier: ^2.20.6
+        version: 2.20.6(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^4.0.4
         version: 4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))
@@ -429,6 +429,9 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
+  '@polka/url@1.0.0-next.29':
+    resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
+
   '@rollup/plugin-commonjs@28.0.2':
     resolution: {integrity: sha512-BEFI2EDqzl+vA1rl97IDRZ61AIwGH093d9nz8+dThxJNH8oSoB7MjWvPCX3dkaK1/RCJ/1v/R1XB15FuSs0fQw==}
     engines: {node: '>=16.0.0 || 14 >= 14.17'}
@@ -565,8 +568,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/kit@2.17.3':
-    resolution: {integrity: sha512-GcNaPDr0ti4O/TonPewkML2DG7UVXkSxPN3nPMlpmx0Rs4b2kVP4gymz98WEHlfzPXdd4uOOT1Js26DtieTNBQ==}
+  '@sveltejs/kit@2.20.6':
+    resolution: {integrity: sha512-ImUkSQ//Xf4N9r0HHAe5vRA7RyQ7U1Ue1YUT235Ig+IiIqbsixEulHTHrP5LtBiC8xOkJoPZQ1VZ/nWHNOaGGw==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -2499,6 +2502,8 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
+  '@polka/url@1.0.0-next.29': {}
+
   '@rollup/plugin-commonjs@28.0.2(rollup@4.31.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.4(rollup@4.31.0)
@@ -2592,15 +2597,15 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.31.0':
     optional: true
 
-  '@sveltejs/adapter-node@5.2.12(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))':
+  '@sveltejs/adapter-node@5.2.12(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))':
     dependencies:
       '@rollup/plugin-commonjs': 28.0.2(rollup@4.31.0)
       '@rollup/plugin-json': 6.1.0(rollup@4.31.0)
       '@rollup/plugin-node-resolve': 16.0.0(rollup@4.31.0)
-      '@sveltejs/kit': 2.17.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))
+      '@sveltejs/kit': 2.20.6(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))
       rollup: 4.31.0
 
-  '@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))':
+  '@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6)))(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 4.0.4(svelte@5.21.0)(vite@5.4.12(@types/node@22.8.6))
       '@types/cookie': 0.6.0
@@ -3851,7 +3856,7 @@ snapshots:
 
   sirv@3.0.1:
     dependencies:
-      '@polka/url': 1.0.0-next.28
+      '@polka/url': 1.0.0-next.29
       mrmime: 2.0.1
       totalist: 3.0.1
 
