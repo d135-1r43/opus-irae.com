@@ -53,20 +53,20 @@
     <form onsubmit={preventDefault(handleSubmit)} class="text-black font-krete p-10">
       <input type="hidden" name="access_key" value="b04efb2e-092c-4804-986f-18cd57cf1806">
       <div class="mb-4">
-        <input class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+        <input class="w-full p-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-600"
                type="text" name="name" required placeholder="Your Name" />
       </div>
       <div class="mb-4">
-        <input class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+        <input class="w-full p-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-600"
                type="email" name="email" required placeholder="Your Email" />
       </div>
       <div class="mb-4">
         <textarea
-          class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+          class="w-full p-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-600"
           name="message" required rows="3" placeholder="Your Message"></textarea>
       </div>
       <div class="mb-4">
-        <input class="py-2 px-4 bg-blue-500/40 text-white rounded-md hover:bg-blue-700 focus:outline-none" type="submit"
+        <input class="py-2 px-4 bg-blue-500/40 text-white rounded-md hover:bg-blue-700 focus:outline-hidden" type="submit"
                value="Submit" />
       </div>
     </form>
@@ -79,7 +79,7 @@
   </aside>
 
   <div class="flex w-full">
-    <div class="v-full flex-grow max-xl:hidden ">
+    <div class="v-full grow max-xl:hidden ">
       <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
         <p>
           Ask, and it shall be given you; seek, and ye shall find

@@ -71,7 +71,7 @@
   </aside>
 
   <div class="flex w-full">
-    <div class="v-full flex-grow max-xl:hidden ">
+    <div class="v-full grow max-xl:hidden ">
       <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
         <p>
           The Front Line is bleeding as the Emperor watches.<br />
