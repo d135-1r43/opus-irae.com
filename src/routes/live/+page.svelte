@@ -73,7 +73,7 @@
               {#if event.ticket_link}
                 <a href="{event.ticket_link}">
                   <button
-                    class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded shadow">
+                    class="mt-2 mb-3 px-2 py-1 text-white text-sm bg-blue-500/40 hover:bg-blue-600 rounded-sm shadow-sm">
                     Tickets
                   </button>
                 </a>
@@ -114,7 +114,7 @@
   </aside>
 
   <div class="flex w-full">
-    <div class="v-full flex-grow max-xl:hidden ">
+    <div class="v-full grow max-xl:hidden ">
       <div class="absolute font-krete italic text-gray-300 bottom-20 right-20 text-2xl max-w-[520px]">
         <p>
           Blessed Are Those Who Mourn

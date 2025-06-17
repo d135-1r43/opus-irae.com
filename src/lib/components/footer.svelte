@@ -5,7 +5,7 @@
 
 <template>
   <div class="fixed bottom-0 border-none">
-    <footer class="mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between md:pl-10 font-krete z-20">
+    <footer class="mx-auto max-w-(--breakpoint-xl) p-4 md:flex md:items-center md:justify-between md:pl-10 font-krete z-20">
       <span class="text-xs text-gray-600 sm:text-center">
         © {currentYear} Opus Iræ & Endtime Productions AB
       </span>
