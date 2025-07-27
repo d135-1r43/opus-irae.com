@@ -33,10 +33,10 @@
 
 <template>
   <aside class="
-      w-full pt-4
+      w-full pt-4 pb-[50px]
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[1220px] text-white md:divide-white
       flex-col divide-y
-      bg-black bg-transparent/30
+      bg-black/30
       ">
 
     <Title />
@@ -67,7 +67,7 @@
       {/each}
     </div>
 
-    <div class="flex justify-center py-2 mt-10 mb-10">
+    <div class="flex justify-center py-2 mt-10 mb-[50px]">
       <Heptagram />
     </div>
 
