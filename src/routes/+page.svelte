@@ -44,17 +44,15 @@
 <template>
   <div class="flex w-full h-full">
     <aside class="
-      h-full w-full pt-4
+      w-full pt-4 h-full
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] text-white md:divide-white
-      overflow-auto
       flex-col divide-y
       bg-black/30
       ">
       <h1
         class="
           mx-auto
-          w-3/5
-          md:w-full
+          w-full
 
           p-6 pb-1.5
           md:pb-4
