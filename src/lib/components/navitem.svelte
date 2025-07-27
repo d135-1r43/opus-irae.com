@@ -1,10 +1,12 @@
 <script lang="ts">
+  import Externallink from "$lib/components/icons/externallink.svelte";
+
   interface Props {
     text?: string;
     href?: string;
   }
 
-  let { text = 'DEFAULT', href = '/' }: Props = $props();
+  let { text = "DEFAULT", href = "/" }: Props = $props();
 </script>
 
 <template>
@@ -13,6 +15,10 @@
     hover:opacity-60
     transition-opacity duration-300"
      href="{href}">
-    {text}
+    {#if href.startsWith("http")}
+      {text}<Externallink />
+      {:else}
+      {text}
+    {/if}
   </a>
 </template>

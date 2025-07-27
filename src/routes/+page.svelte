@@ -70,6 +70,7 @@
         <NavItem text="Discography" href="/music" />
         <NavItem text="Live" href="/live" />
         <NavItem text="Info" href="/info" />
+        <NavItem text="Merch" href="https://endtimeproductions.bandcamp.com/merch?filter_band=132774664" />
         <NavItem text="Contact" href="/contact" />
       </nav>
       <div class="flex py-5 pl-7">
