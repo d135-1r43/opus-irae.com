@@ -34,7 +34,7 @@
       w-full pt-4
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] text-white md:divide-white
       flex-col divide-y
-      bg-black bg-transparent/50
+      bg-black/30
       ">
 
     <Title />
