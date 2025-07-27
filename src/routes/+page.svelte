@@ -48,7 +48,7 @@
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] text-white md:divide-white
       overflow-auto
       flex-col divide-y
-      bg-black bg-transparent/30
+      bg-black/30
       ">
       <h1
         class="

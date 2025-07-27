@@ -36,10 +36,10 @@
 
 <template>
   <aside class="
-      w-full pt-4
+      w-full h-screen pt-4
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] text-white md:divide-white
       flex-col divide-y
-      bg-black bg-transparent/50
+      bg-black/30
       ">
 
     <Title />
@@ -50,7 +50,7 @@
         engage with us through our social media platforms.</p>
     </div>
 
-    <form onsubmit={preventDefault(handleSubmit)} class="text-black font-krete p-10">
+    <form onsubmit={preventDefault(handleSubmit)} class="text-white font-krete p-10">
       <input type="hidden" name="access_key" value="b04efb2e-092c-4804-986f-18cd57cf1806">
       <div class="mb-4">
         <input class="w-full p-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-600"
