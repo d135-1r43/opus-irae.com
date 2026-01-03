@@ -32,7 +32,7 @@
 <template>
   <aside class="
       w-full pt-4
-      md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] text-white md:divide-white
+      md:ml-10 md:p-2xl md:min-w-[580px] md:max-w-[620px] text-white md:divide-white
       flex-col divide-y
       bg-black/30
       ">
@@ -56,8 +56,8 @@
 
         {#each data.futureEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-2 pb-10">
-            <p class="text-lg text-white">{ formatDate(event.date) }</p>
-            <div class="md:min-w-[350px] md:max-w-[350px] overflow-hidden">
+            <p class="text-lg text-white md:min-w-[120px] md:max-w-[120px]">{ formatDate(event.date) }</p>
+            <div class="md:min-w-[420px] md:max-w-[420px] overflow-hidden">
               <p class="text-lg text-white break-words">
                 {#if event.event_name}
                   { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
@@ -89,8 +89,8 @@
         </div>
         {#each data.pastEvents as event }
           <div class="flex flex-col md:flex-row justify-between px-4 py-4">
-            <p class="text-lg text-white">{ formatDate(event.date) }</p>
-            <div class="md:min-w-[350px] overflow-hidden">
+            <p class="text-lg text-white md:min-w-[120px] md:max-w-[120px]">{ formatDate(event.date) }</p>
+            <div class="md:min-w-[420px] md:max-w-[420px] overflow-hidden">
               <p class="text-lg text-white break-words">
                 {#if event.event_name}
                   { event.event_name }&nbsp;&middot;&nbsp;{ event.location }
