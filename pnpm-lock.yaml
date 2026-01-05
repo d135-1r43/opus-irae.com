@@ -28,7 +28,7 @@ importers:
         version: 4.1.10
       '@tailwindcss/typography':
         specifier: ^0.5.19
-        version: 0.5.19(tailwindcss@4.1.11)
+        version: 0.5.19(tailwindcss@4.1.18)
       '@typescript-eslint/eslint-plugin':
         specifier: ~8.34.0
         version: 8.34.0(@typescript-eslint/parser@8.51.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.3)
@@ -87,8 +87,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3(postcss-load-config@6.0.1(jiti@2.4.2)(postcss@8.5.6)(yaml@2.6.0))(postcss@8.5.6)(svelte@5.34.4)(typescript@5.8.3)
       tailwindcss:
-        specifier: ^4.1.11
-        version: 4.1.11
+        specifier: ^4.1.18
+        version: 4.1.18
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -2248,8 +2248,8 @@ packages:
   tailwindcss@4.1.10:
     resolution: {integrity: sha512-P3nr6WkvKV/ONsTzj6Gb57sWPMX29EPNPopo7+FcpkQaNsrNpZ1pv8QmrYI2RqEKD7mlGqLnGovlcYnBK0IqUA==}
 
-  tailwindcss@4.1.11:
-    resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
+  tailwindcss@4.1.18:
+    resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
 
   tapable@2.2.2:
     resolution: {integrity: sha512-Re10+NauLTMCudc7T5WLFLAwDhQ0JWdrMK+9B2M8zR5hRExKmsRDCBA7/aV/pNJFltmBFO5BAMlQFi/vq3nKOg==}
@@ -3078,10 +3078,10 @@ snapshots:
       postcss: 8.5.6
       tailwindcss: 4.1.10
 
-  '@tailwindcss/typography@0.5.19(tailwindcss@4.1.11)':
+  '@tailwindcss/typography@0.5.19(tailwindcss@4.1.18)':
     dependencies:
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.1.11
+      tailwindcss: 4.1.18
 
   '@testing-library/dom@7.31.2':
     dependencies:
@@ -4450,7 +4450,7 @@ snapshots:
 
   tailwindcss@4.1.10: {}
 
-  tailwindcss@4.1.11: {}
+  tailwindcss@4.1.18: {}
 
   tapable@2.2.2: {}
 
