@@ -1,8 +1,7 @@
-FROM node:25-slim AS base
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
+FROM node:25 AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN npm install -g corepack && corepack enable
+RUN npm install -g pnpm
 COPY . /app
 WORKDIR /app
 
