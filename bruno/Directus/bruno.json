@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "Directus",
+  "name": "directus.herhoffer.net",
   "type": "collection",
   "ignore": [
     "node_modules",

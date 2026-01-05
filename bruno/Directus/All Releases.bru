@@ -1,0 +1,21 @@
+meta {
+  name: All Releases
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://directus.herhoffer.net/items/release/?sort=-release_date&filter[status][_eq]=published&filter[band][_eq]=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort: -release_date
+  filter[status][_eq]: published
+  filter[band][_eq]: 1
+}
+
+settings {
+  encodeUrl: true
+}
