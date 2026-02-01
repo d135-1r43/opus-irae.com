@@ -24,7 +24,7 @@
     "@playwright-testing-library/test": "^4.5.0",
     "@playwright/test": "^1.58.0",
     "@sveltejs/adapter-node": "^5.5.1",
-    "@sveltejs/kit": "^2.50.0",
+    "@sveltejs/kit": "^2.50.1",
     "@sveltejs/vite-plugin-svelte": "^4.0.4",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/postcss": "^4.1.18",
