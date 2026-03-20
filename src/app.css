@@ -1,6 +1,14 @@
 @import 'tailwindcss';
 
-@config '../tailwind.config.cjs';
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--font-inter: "inter", sans-serif;
+	--font-poppins: "poppins", serif;
+	--font-fira-mono: "fira-mono";
+	--font-trajan: "trajan-pro-3", serif;
+	--font-krete: "krete", serif;
+}
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
