@@ -1,7 +1,7 @@
 FROM node:26 AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN npm install -g pnpm
+RUN npm install -g pnpm@11.4.0
 COPY . /app
 WORKDIR /app
 
