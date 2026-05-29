@@ -1,4 +1,7 @@
-onlyBuiltDependencies:
-  - svelte-preprocess
-  - esbuild
-  - core-js-pure
+# pnpm v11 removed `onlyBuiltDependencies`; use `allowBuilds` to approve the
+# dependency build scripts so `pnpm install --frozen-lockfile` doesn't abort
+# with ERR_PNPM_IGNORED_BUILDS in CI (non-interactive).
+allowBuilds:
+  esbuild: true
+  svelte-preprocess: true
+  core-js-pure: true
