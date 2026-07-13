@@ -4,6 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # Wait before opening PRs so freshly published packages clear the pnpm
+    # `minimumReleaseAge` supply-chain policy (~1 day) enforced in CI. Majors
+    # get a longer cooldown to let the ecosystem settle before we bump.
+    cooldown:
+      default-days: 3
+      semver-major-days: 7
     groups:
       npm_and_yarn:
         patterns:
@@ -12,6 +18,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 3
     groups:
       docker:
         patterns:
@@ -20,6 +28,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 3
     groups:
       github-actions:
         patterns:
