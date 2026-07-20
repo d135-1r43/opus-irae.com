@@ -10,6 +10,12 @@ updates:
     cooldown:
       default-days: 3
       semver-major-days: 7
+    # TypeScript 7 is the native port and ships a much smaller JS API than 6.x.
+    # svelte-preprocess and svelte-check both still call into the removed APIs
+    # and crash on it, so the build breaks. Drop this once they support TS 7.
+    ignore:
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     groups:
       npm_and_yarn:
         patterns:
