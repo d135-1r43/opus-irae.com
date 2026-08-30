@@ -1,5 +1,5 @@
 <template>
-  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 216 216">
+  <svg class="logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 216 216">
     <defs>
       <style>
           .cls-1 {
@@ -143,3 +143,36 @@
     </g>
   </svg>
 </template>
+
+<style>
+  /* A faint halo that breathes, and opens up when the mark is approached. */
+  .logo {
+    filter: drop-shadow(0 0 0 rgb(147 197 253 / 0));
+    transition:
+      filter 1200ms var(--ease-sacred),
+      transform 1200ms var(--ease-sacred);
+    animation: oi-logo-breathe 11s ease-in-out infinite;
+  }
+
+  @keyframes oi-logo-breathe {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 6px rgb(147 197 253 / 0.10));
+    }
+    50% {
+      filter: drop-shadow(0 0 16px rgb(147 197 253 / 0.24));
+    }
+  }
+
+  :global(.logo-link:hover) .logo,
+  :global(.logo-link:focus-visible) .logo {
+    animation: none;
+    filter: drop-shadow(0 0 22px rgb(147 197 253 / 0.45));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo {
+      animation: none;
+    }
+  }
+</style>

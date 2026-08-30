@@ -43,35 +43,26 @@
 
 <template>
   <div class="flex w-full h-full">
-    <aside class="
+    <aside class="oi-rise
       w-full pt-4 h-full
       md:ml-10 md:p-2xl md:min-w-[480px] md:max-w-[520px] text-white md:divide-white
       flex-col divide-y
       bg-black/30
       ">
-      <h1
-        class="
-          mx-auto
-          w-full
-
-          p-6 pb-1.5
-          md:pb-4
-
-          hover:opacity-60
-          transition-opacity duration-300">
-
-        <a href="{data.band.website}">
+      <h1 class="oi-unveil mx-auto w-full p-6 pb-1.5 md:pb-4">
+        <a class="logo-link block" href="{data.band.website}">
           <Logo />
         </a>
       </h1>
+      <!-- The nav arrives one line at a time, like a processional. -->
       <nav class="flex flex-col py-5 pl-7">
-        <NavItem text="Discography" href="/music" />
-        <NavItem text="Live" href="/live" />
-        <NavItem text="Info" href="/info" />
-        <NavItem text="Merch" href="https://endtimeproductions.bandcamp.com/merch?filter_band=132774664" />
-        <NavItem text="Contact" href="/contact" />
+        <NavItem text="Discography" href="/music" delay={340} />
+        <NavItem text="Live" href="/live" delay={430} />
+        <NavItem text="Info" href="/info" delay={520} />
+        <NavItem text="Merch" href="https://endtimeproductions.bandcamp.com/merch?filter_band=132774664" delay={610} />
+        <NavItem text="Contact" href="/contact" delay={700} />
       </nav>
-      <div class="flex py-5 pl-7">
+      <div class="oi-rise flex py-5 pl-7" style="--oi-delay: 820ms">
         <Bandcamp href={data.socials.get('bandcamp').url} />
         <Spotify href={data.socials.get('spotify').url} />
         <Apple href={data.socials.get('apple_music').url} />
@@ -81,8 +72,11 @@
     </aside>
     <div class="h-full v-full grow max-lg:hidden ">
       <div class="absolute text-2xl font-krete text-gray-300 italic bottom-20 right-20 max-w-[520px]">
-        <p>
-          Surely he hath borne our griefs, and carried our sorrows:<br />
+        <!-- Scripture surfaces out of the dark, one line after the other. -->
+        <p class="oi-emerge" style="--oi-delay: 900ms">
+          Surely he hath borne our griefs, and carried our sorrows:
+        </p>
+        <p class="oi-emerge" style="--oi-delay: 1500ms">
           yet we did esteem him stricken, smitten and afflicted.
         </p>
       </div>

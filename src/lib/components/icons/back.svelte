@@ -1,10 +1,9 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 100 100"
        class="
-          fill-gray-400 text-2xl block leading-[55px]
-          hover:opacity-60
-          mr-2
-          transition-opacity duration-300">
+          fill-gray-400 text-2xl block leading-[55px] mr-2
+          transition-[fill] duration-500 ease-out
+          group-hover:fill-white">
     <title>Back</title>
     <path
       d="m78.125 48.438h-52.469l19.188-19.219c0.60547-0.60547 0.60547-1.582

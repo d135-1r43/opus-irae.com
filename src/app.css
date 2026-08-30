@@ -8,6 +8,10 @@
 	--font-fira-mono: "fira-mono";
 	--font-trajan: "trajan-pro-3", serif;
 	--font-krete: "krete", serif;
+
+	/* Motion vocabulary: slow, reverent, never bouncy. */
+	--ease-sacred: cubic-bezier(0.22, 0.61, 0.36, 1);
+	--ease-veil: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /*
@@ -25,5 +29,245 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* ==========================================================================
+   Motion system
+   --------------------------------------------------------------------------
+   Everything here is opt-in via a class, and everything is switched off by
+   `prefers-reduced-motion` at the bottom of this file.
+
+   `--oi-delay` staggers any of the entrance animations; set it inline.
+   ========================================================================== */
+
+@keyframes oi-rise {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes oi-unveil {
+  from {
+    opacity: 0;
+  }
+}
+
+/*
+  Opacity alone. Nothing here may move or blur: a translate reads as a jump,
+  and an animated `filter: blur()` repaints every frame instead of staying on
+  the compositor, so it stutters whenever the main thread is busy.
+*/
+@keyframes oi-emerge {
+  from {
+    opacity: 0;
+  }
+}
+
+/* The heavens turn: an all-but-imperceptible drift over the background art. */
+@keyframes oi-heavens {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.09) translate3d(-1.4%, -1%, 0);
+  }
+}
+
+/* A veil of light passing across the sky. */
+@keyframes oi-veil-drift {
+  from {
+    transform: translate3d(-12%, 4%, 0) rotate(-4deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translate3d(12%, -6%, 0) rotate(4deg);
+    opacity: 0;
+  }
+}
+
+/* The sigil turns, once every four minutes. */
+@keyframes oi-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Censer light: a slow breath in the glow of the mark. */
+@keyframes oi-ember {
+  0%,
+  100% {
+    opacity: 0.68;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes oi-pulse-soft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* --- Entrance utilities ---------------------------------------------------- */
+
+.oi-rise {
+  animation: oi-rise 900ms var(--ease-sacred) both;
+  animation-delay: var(--oi-delay, 0ms);
+}
+
+.oi-unveil {
+  animation: oi-unveil 1100ms var(--ease-veil) both;
+  animation-delay: var(--oi-delay, 0ms);
+}
+
+.oi-emerge {
+  animation: oi-emerge 1200ms var(--ease-veil) both;
+  animation-delay: var(--oi-delay, 0ms);
+}
+
+/* --- Scroll reveal (driven by use:reveal) ---------------------------------- */
+
+.oi-veiled {
+  opacity: 0;
+}
+
+.oi-unveiled {
+  opacity: 1;
+  transition: opacity 1000ms var(--ease-veil);
+  transition-delay: var(--oi-delay, 0ms);
+}
+
+/* --- Backdrop -------------------------------------------------------------- */
+
+.oi-heavens {
+  animation: oi-heavens 120s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.oi-veil-light {
+  animation: oi-veil-drift 48s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* --- The sigil ------------------------------------------------------------- */
+
+.oi-sigil svg {
+  transform-origin: 50% 50%;
+  /* Two independent properties, so the turn and the breath never fight. */
+  animation:
+    oi-turn 240s linear infinite,
+    oi-ember 9s ease-in-out infinite;
+  transition: filter 1200ms var(--ease-sacred);
+}
+
+.oi-sigil:hover svg,
+.oi-sigil:focus-visible svg {
+  filter: drop-shadow(0 0 12px rgb(147 197 253 / 0.6));
+}
+
+/* --- Links ----------------------------------------------------------------- */
+
+/* A hairline drawn beneath the word, left to right. */
+.oi-rule {
+  position: relative;
+}
+
+.oi-rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.12em;
+  height: 1px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.85),
+    rgb(147 197 253 / 0.5) 60%,
+    transparent
+  );
+  transition: transform 600ms var(--ease-sacred);
+}
+
+.oi-rule:hover::after,
+.oi-rule:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* --- Focus ----------------------------------------------------------------- */
+
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 1px solid rgb(147 197 253 / 0.7);
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
+/* --- Cross-page transitions ------------------------------------------------ */
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: 220ms var(--ease-sacred) both oi-vt-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 460ms var(--ease-veil) 60ms both oi-vt-in;
+  }
+}
+
+@keyframes oi-vt-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes oi-vt-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* --- Respect the reader ----------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .oi-rise,
+  .oi-unveil,
+  .oi-emerge,
+  .oi-heavens,
+  .oi-veil-light,
+  .oi-sigil svg {
+    animation: none !important;
+  }
+
+  .oi-veiled {
+    opacity: 1;
+  }
+
+  .oi-unveiled {
+    transition: none;
+  }
+
+  .oi-rule::after {
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

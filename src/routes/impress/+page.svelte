@@ -26,11 +26,12 @@
     <Title />
 
     <div>
-      <h1 class="px-10 pt-10 pb-6 text-3xl font-krete font-bold tracking-wide">Impressum</h1>
-      <div class="impress-content px-10 pb-12 font-krete font-normal text-md leading-relaxed">
+      <h1 class="oi-rise px-10 pt-10 pb-6 text-3xl font-krete font-bold tracking-wide">Impressum</h1>
+      <div class="oi-rise impress-content px-10 pb-12 font-krete font-normal text-md leading-relaxed"
+           style="--oi-delay: 150ms">
         {@html data.texts.data.impress}
       </div>
-      <h1 class="px-10 pt-12 pb-6 text-3xl font-krete font-bold tracking-wide">Datenschutz&shy;erkl&auml;rung</h1>
+      <h1 class="oi-rise px-10 pt-12 pb-6 text-3xl font-krete font-bold tracking-wide">Datenschutz&shy;erkl&auml;rung</h1>
       <div class="impress-content px-10 pb-12 font-krete font-normal text-md leading-relaxed">
         {@html data.texts.data.datenschutz}
       </div>
@@ -100,9 +101,13 @@
   :global(.impress-content a) {
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.4);
+    transition:
+      text-decoration-color 400ms var(--ease-sacred),
+      color 400ms var(--ease-sacred);
   }
 
   :global(.impress-content a:hover) {
+    color: rgb(191, 219, 254);
     text-decoration-color: rgba(255, 255, 255, 0.8);
   }
 </style>

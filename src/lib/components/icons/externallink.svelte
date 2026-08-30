@@ -1,5 +1,7 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 100 100" class="inline-block fill-white/30 -mt-0.5">
+  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 100 100" class="inline-block fill-white/30 -mt-0.5 ml-1
+         transition-[fill] duration-500 ease-out
+         group-hover:fill-white/70">
     <g fill-rule="evenodd">
       <path
         d="m65.625 53.125c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125
