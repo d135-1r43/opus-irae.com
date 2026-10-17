@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Title from "$lib/components/title.svelte";
-  import Heptagram from "$lib/components/icons/heptagram.svelte";
+  import Title from "#lib/components/title.svelte";
+  import Heptagram from "#lib/components/icons/heptagram.svelte";
 
   import type { PageData } from "./$types";
 
