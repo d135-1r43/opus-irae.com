@@ -3,13 +3,13 @@
 
   import { MetaTags } from "svelte-meta-tags";
 
-  import Spotify from "$lib/components/socials/spotify.svelte";
-  import Apple from "$lib/components/socials/apple.svelte";
-  import Bandcamp from "$lib/components/socials/bandcamp.svelte";
-  import Footer from "$lib/components/footer.svelte";
-  import NavItem from "$lib/components/navitem.svelte";
-  import Instagram from "$lib/components/socials/instagram.svelte";
-  import Logo from "$lib/components/logo.svelte";
+  import Spotify from "#lib/components/socials/spotify.svelte";
+  import Apple from "#lib/components/socials/apple.svelte";
+  import Bandcamp from "#lib/components/socials/bandcamp.svelte";
+  import Footer from "#lib/components/footer.svelte";
+  import NavItem from "#lib/components/navitem.svelte";
+  import Instagram from "#lib/components/socials/instagram.svelte";
+  import Logo from "#lib/components/logo.svelte";
 
   interface Props {
     data: PageData;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Externallink from "$lib/components/icons/externallink.svelte";
+  import Externallink from "#lib/components/icons/externallink.svelte";
 
   interface Props {
     text?: string;

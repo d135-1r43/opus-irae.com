@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Title from "$lib/components/title.svelte";
-  import Heptagram from "$lib/components/icons/heptagram.svelte";
-  import { reveal } from "$lib/actions/reveal";
+  import Title from "#lib/components/title.svelte";
+  import Heptagram from "#lib/components/icons/heptagram.svelte";
+  import { reveal } from "#lib/actions/reveal.ts";
 
   import type { PageData } from "./$types";
 

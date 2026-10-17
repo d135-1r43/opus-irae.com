@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Back from "$lib/components/icons/back.svelte";
+  import Back from "#lib/components/icons/back.svelte";
 </script>
 
 <template>

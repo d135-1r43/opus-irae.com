@@ -1,15 +1,15 @@
 <script lang="ts">
   import type { PageData } from "./$types";
 
-  import { FormatUtils } from "$lib/format-utils";
-  import { reveal } from "$lib/actions/reveal";
+  import { FormatUtils } from "#lib/format-utils.ts";
+  import { reveal } from "#lib/actions/reveal.ts";
 
-  import Heptagram from "$lib/components/icons/heptagram.svelte";
-  import Title from "$lib/components/title.svelte";
+  import Heptagram from "#lib/components/icons/heptagram.svelte";
+  import Title from "#lib/components/title.svelte";
 
-  import Spotify from "$lib/components/socials/spotify.svelte";
-  import Bandcamp from "$lib/components/socials/bandcamp.svelte";
-  import Apple from "$lib/components/socials/apple.svelte";
+  import Spotify from "#lib/components/socials/spotify.svelte";
+  import Bandcamp from "#lib/components/socials/bandcamp.svelte";
+  import Apple from "#lib/components/socials/apple.svelte";
 
   interface Props {
     data: PageData;
